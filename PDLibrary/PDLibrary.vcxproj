@@ -92,7 +92,6 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Create</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
@@ -119,7 +118,6 @@ move /Y "$(OutDir)$(TargetName).lib" "$(SolutionDir)libs\$(TargetName).lib"</Com
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Create</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
@@ -146,7 +144,6 @@ move /Y "$(OutDir)$(TargetName).lib" "$(SolutionDir)libs\$(TargetName).lib"</Com
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Create</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -177,7 +174,6 @@ move /Y "$(OutDir)$(TargetName).lib" "$(SolutionDir)libs\$(TargetName).lib"</Com
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>Create</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -209,6 +205,10 @@ move /Y "$(OutDir)$(TargetName).lib" "$(SolutionDir)libs\$(TargetName).lib"</Com
   <ItemGroup>
     <ClInclude Include="PDL\Collection\ArrayList.h" />
     <ClInclude Include="PDL\Collection\ArrayList.hpp" />
+    <ClInclude Include="PDL\Collection\LinkedList.h" />
+    <ClInclude Include="PDL\Collection\LinkedList.hpp" />
+    <ClInclude Include="PDL\Collection\HTNode.h" />
+    <ClInclude Include="PDL\Collection\HTNode.hpp" />
     <ClInclude Include="PDL\Debug\Debug.h" />
     <ClInclude Include="PDL\Debug\Exception.h" />
     <ClInclude Include="PDL\Memory\MemoryPool.h" />
@@ -219,6 +219,7 @@ move /Y "$(OutDir)$(TargetName).lib" "$(SolutionDir)libs\$(TargetName).lib"</Com
     <ClInclude Include="PDL\PDCore.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="PDL\Collection\LinkedList.cpp" />
     <ClCompile Include="PDL\Memory\MemoryPool.cpp" />
     <ClCompile Include="PDL\Memory\RefCount.cpp" />
   </ItemGroup>

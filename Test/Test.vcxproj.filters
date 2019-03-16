@@ -33,6 +33,9 @@
     <ClInclude Include=".\TestSources\TestArrayList.h">
       <Filter>TestSources</Filter>
     </ClInclude>
+    <ClInclude Include="TestSources\TestLinkedList.h">
+      <Filter>TestSources</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">

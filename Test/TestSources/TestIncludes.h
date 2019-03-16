@@ -4,5 +4,6 @@
 #include "TestBase.h"
 #include "TestMemoryPool.h"
 #include "TestArrayList.h"
+#include "TestLinkedList.h"
 
 #endif

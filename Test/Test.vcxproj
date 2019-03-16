@@ -171,6 +171,7 @@
     <ClInclude Include=".\TestSources\TestArrayList.h" />
     <ClInclude Include="TestSources\TestBase.h" />
     <ClInclude Include="TestSources\TestIncludes.h" />
+    <ClInclude Include="TestSources\TestLinkedList.h" />
     <ClInclude Include="TestSources\TestMemoryPool.h" />
   </ItemGroup>
   <ItemGroup>

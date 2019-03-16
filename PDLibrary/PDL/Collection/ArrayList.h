@@ -2,7 +2,6 @@
 #define _PDL_COLLECTION_ARRAYLIST_H_
 
 #include "../PDCore.h"
-#include "../Memory/Ptr.h"
 
 namespace pdl {
 	namespace collection {

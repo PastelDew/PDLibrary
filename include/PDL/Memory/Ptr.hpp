@@ -129,7 +129,6 @@ bool Ptr<T>::IsValid() {
 */
 template<typename T>
 void Ptr<T>::Copy(const Ptr<T>& s) {
-	if (!s || mPtr == s.mPtr) return;
 	this->Unref();
 	mPtr = s.mPtr;
 	this->Ref();
@@ -138,7 +137,6 @@ void Ptr<T>::Copy(const Ptr<T>& s) {
 
 template<typename T>
 void Ptr<T>::Copy(T* s) {
-	if (s == NULL || s == nullptr || mPtr == s) return;
 	this->Unref();
 	mPtr = s;
 	this->Ref();
@@ -146,6 +144,7 @@ void Ptr<T>::Copy(T* s) {
 
 template<typename T>
 void Ptr<T>::Ref() {
+	if (!IsValid()) return;
 	RefCount::Ref(mPtr);
 }
 

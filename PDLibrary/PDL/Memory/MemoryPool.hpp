@@ -7,6 +7,7 @@ template<class C>
 Ptr<C> MemoryPool::Allocate() {
 	Ptr<MemoryBlock> block = GetInstance()->AllocateBlock(sizeof(C));
 	C* obj = new(block->blockAddress) C();
+	block.Ref();
 	return Ptr<C>(obj, true);
 }
 
@@ -15,6 +16,7 @@ Ptr<C> MemoryPool::AllocateArray(size_t count) {
 	assert(count > 0);
 	Ptr<MemoryBlock> block = GetInstance()->AllocateBlock(sizeof(C) * count);
 	C* obj = (C*)block->blockAddress;
+	block.Ref();
 	return Ptr<C>(obj, true);
 }
 
@@ -22,6 +24,7 @@ template <class C, typename... Args>
 Ptr<C> MemoryPool::Allocate(Args... args) {
 	Ptr<MemoryBlock> block = GetInstance()->AllocateBlock(sizeof(C));
 	C* obj = new(block->blockAddress) C(args);
+	block.Ref();
 	return Ptr<C>(obj, true);
 }
 
@@ -38,6 +41,8 @@ void MemoryPool::Free(T* obj) {
 		mem->mMutex.lock();
 		if (mem->mAvailableBlock.count(block) > 0)
 			mem->mAvailableBlock.erase(block);
+		else
+			obj->~T();
 
 		if (mem->mAvailableBlock.count(block->prevBlock)) {
 			Ptr<MemoryBlock> prevBlock(block->prevBlock, true);

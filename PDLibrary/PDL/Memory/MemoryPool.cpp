@@ -5,7 +5,7 @@ using namespace pdl::memory;
 MemoryPool* MemoryPool::instance = nullptr;
 
 MemoryPool::MemoryPool() {
-	mBlockSize = PDL_MEMORY_POOL_DEFAULT_SIZE;
+	mBlockSize = PDL_MEMORY_POOL_DEFAULT_SIZE + SIZE_OF_MEMORY_BLOCK;
 	AllocatePage();
 }
 
@@ -68,7 +68,7 @@ bool MemoryPool::HasObject(void* obj) {
 	for (map<Ptr<MemoryBlock>, size_t>::iterator it = mPages.begin(); it != mPages.end(); it++) {
 		MemoryBlock* pPage = it->first.Referer();
 		if (pPage == (MemoryBlock*)((size_t)obj - SIZE_OF_MEMORY_BLOCK)) return true; // isParent?
-		else if (pPage < obj && obj <= (void*)((size_t)pPage + SIZE_OF_MEMORY_BLOCK + pPage->length)) {
+		else if (pPage < obj && obj <= (void*)((size_t)pPage + SIZE_OF_MEMORY_BLOCK + mPages[pPage])) {
 			MemoryBlock* block = (MemoryBlock*)((size_t)obj - SIZE_OF_MEMORY_BLOCK);
 			return block->blockAddress == obj;
 		}
@@ -81,7 +81,7 @@ bool MemoryPool::HasNextBlock(Ptr<MemoryBlock> block) {
 	size_t nextBlockOffset = (size_t)block.Referer() - (size_t)parentBlock.Referer() + SIZE_OF_MEMORY_BLOCK + block->length + 1;
 	return nextBlockOffset + SIZE_OF_MEMORY_BLOCK/*Required header of next block*/
 		< /*at least 1 byte for object*/
-		SIZE_OF_MEMORY_BLOCK + parentBlock->length;
+		SIZE_OF_MEMORY_BLOCK + mPages[parentBlock];
 }
 
 Ptr<MemoryPool::MemoryBlock> MemoryPool::GetNextBlock(Ptr<MemoryBlock> block) {

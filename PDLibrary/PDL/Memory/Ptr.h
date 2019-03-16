@@ -28,6 +28,9 @@ namespace pdl {
 			~Ptr<T>() { Unref(); }
 
 			T* Referer() const;
+			void Ref();
+			void Unref();
+
 			Ptr<T>& operator =(Ptr<T> ptr);
 			Ptr<T>& operator =(T* ptr);
 			T& operator *();
@@ -58,8 +61,6 @@ namespace pdl {
 
 			void Copy(const Ptr<T>& s);
 			void Copy(T* s);
-			void Ref();
-			void Unref();
 		};
 
 		

@@ -48,6 +48,18 @@
     <ClInclude Include="PDL\Collection\ArrayList.hpp">
       <Filter>PDL\Collection</Filter>
     </ClInclude>
+    <ClInclude Include="PDL\Collection\LinkedList.h">
+      <Filter>PDL\Collection</Filter>
+    </ClInclude>
+    <ClInclude Include="PDL\Collection\LinkedList.hpp">
+      <Filter>PDL\Collection</Filter>
+    </ClInclude>
+    <ClInclude Include="PDL\Collection\HTNode.h">
+      <Filter>PDL\Collection</Filter>
+    </ClInclude>
+    <ClInclude Include="PDL\Collection\HTNode.hpp">
+      <Filter>PDL\Collection</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PDL\Memory\RefCount.cpp">
@@ -55,6 +67,9 @@
     </ClCompile>
     <ClCompile Include="PDL\Memory\MemoryPool.cpp">
       <Filter>PDL\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="PDL\Collection\LinkedList.cpp">
+      <Filter>PDL\Collection</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

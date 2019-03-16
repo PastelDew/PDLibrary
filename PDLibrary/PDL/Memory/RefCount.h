@@ -20,6 +20,4 @@ namespace pdl {
 	}
 }
 
-//#include "RefCount.hpp"
-
 #endif // End of _PDL_MEMORY_REFCOUNT_H_
