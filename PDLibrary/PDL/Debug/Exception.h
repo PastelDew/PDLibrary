@@ -1,4 +1,3 @@
-#pragma warning(disable: 4251)
 #ifndef _PDL_DEBUG_EXCEPTION_H_
 #define _PDL_DEBUG_EXCEPTION_H_
 
@@ -8,7 +7,7 @@ using namespace std;
 
 namespace pdl {
 	namespace debug {
-		class PDLDLL_API Exception {
+		class Exception {
 		protected:
 			string mMSG;
 			int mErrorCode;

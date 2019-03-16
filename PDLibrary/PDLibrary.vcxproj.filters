@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="PDL">
+      <UniqueIdentifier>{0586102c-79a9-450f-83b2-a606bff825a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PDL\Memory">
+      <UniqueIdentifier>{4b7faef4-657f-4e73-9ae5-a33eedf29b6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PDL\Debug">
+      <UniqueIdentifier>{c0e34b09-b257-4d33-aa38-365ab3d9b307}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PDL\Collection">
+      <UniqueIdentifier>{9b150815-3124-4e51-89da-e73c7d839040}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PDL\Memory\RefCount.h">
+      <Filter>PDL\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="PDL\PDCore.h">
+      <Filter>PDL</Filter>
+    </ClInclude>
+    <ClInclude Include="PDL\Memory\Ptr.h">
+      <Filter>PDL\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="PDL\Memory\Ptr.hpp">
+      <Filter>PDL\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="PDL\Debug\Debug.h">
+      <Filter>PDL\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="PDL\Debug\Exception.h">
+      <Filter>PDL\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="PDL\Memory\MemoryPool.h">
+      <Filter>PDL\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="PDL\Memory\MemoryPool.hpp">
+      <Filter>PDL\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="PDL\Collection\ArrayList.h">
+      <Filter>PDL\Collection</Filter>
+    </ClInclude>
+    <ClInclude Include="PDL\Collection\ArrayList.hpp">
+      <Filter>PDL\Collection</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="PDL\Memory\RefCount.cpp">
+      <Filter>PDL\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="PDL\Memory\MemoryPool.cpp">
+      <Filter>PDL\Memory</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
