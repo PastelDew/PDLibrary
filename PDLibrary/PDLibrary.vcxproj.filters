@@ -13,6 +13,9 @@
     <Filter Include="PDL\Collection">
       <UniqueIdentifier>{9b150815-3124-4e51-89da-e73c7d839040}</UniqueIdentifier>
     </Filter>
+    <Filter Include="PDL\Algorithm">
+      <UniqueIdentifier>{dc2b82f9-6914-4522-87bb-0b9b579bf216}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PDL\Memory\RefCount.h">
