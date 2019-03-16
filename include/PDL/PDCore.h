@@ -12,6 +12,14 @@
 #define PDLDLL_EXTERN extern
 #endif
 
+#if defined(__clang__)
+#define PDL_COMPILER_CLANG
+#elif defined(__GNUC__) || defined(__GNUG__)
+#define PDL_COMPILER_GNU
+#elif defined(_MSC_VER)
+#define PDL_COMPILER_MSC
+#endif
+
 #define PDL_VERSION 0.0.1
 
 #include <stdint.h>
