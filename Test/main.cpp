@@ -2,12 +2,6 @@
 #include "TestSources/TestIncludes.h"
 #include <iostream>
 
-TestBase* testCases[] = {
-	(TestBase*) new TestMemoryPool(),
-	(TestBase*) new TestArrayList(),
-	(TestBase*) new TestLinkedList()
-};
-
 int main(void) {
 	LinkedList<Ptr<TestBase>> testCases;
 	testCases << new TestMemoryPool() << new TestArrayList() << new TestLinkedList();
