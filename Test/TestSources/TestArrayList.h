@@ -9,7 +9,9 @@
 using namespace pdl::collection;
 
 class TestArrayList : public TestBase {
-public:
+protected:
+	const char* GetTestName() { return "ArrayList"; }
+
 	class _TestClass {
 	public:
 		int val;
@@ -29,7 +31,7 @@ public:
 	};
 
 
-	void Run() {
+	void DoRun() {
 		ArrayList<_TestClass> arrayList;
 		_TestClass a;
 		a.val = 10;

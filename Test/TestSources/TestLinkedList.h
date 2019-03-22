@@ -9,7 +9,9 @@
 using namespace pdl::collection;
 
 class TestLinkedList : public TestBase {
-public:
+protected:
+	const char* GetTestName() { return "LinkedList"; }
+
 	class _TestClass {
 	public:
 		int val;
@@ -29,7 +31,7 @@ public:
 	};
 
 
-	void Run() {
+	void DoRun() {
 		LinkedList<_TestClass> list;
 		{
 			_TestClass a;

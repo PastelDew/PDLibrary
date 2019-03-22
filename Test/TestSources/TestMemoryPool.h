@@ -9,7 +9,9 @@
 using namespace pdl::memory;
 
 class TestMemoryPool : public TestBase {
-public:
+protected:
+	const char* GetTestName() { return "MemoryPool"; }
+
 	class _TestClass {
 	public:
 		int val;
@@ -24,7 +26,7 @@ public:
 	};
 
 
-	void Run() {
+	void DoRun() {
 		Ptr<uint8_t> ptr = MemoryPool::Allocate(10);
 		for (int i = 0; i < 10; i++)
 			ptr[i] = i;
