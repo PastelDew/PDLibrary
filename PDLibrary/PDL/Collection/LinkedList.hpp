@@ -117,9 +117,6 @@ template<typename T>
 void LinkedList<T>::Clear() {
 	while (mSize > 0)
 		RemoveAt(0);
-	this->mFirst = CreateNode();
-	this->mLast = this->mFirst;
-	this->mSize = 0;
 }
 
 template<typename T>
