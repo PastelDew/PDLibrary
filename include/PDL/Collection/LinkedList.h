@@ -22,6 +22,8 @@ namespace pdl {
 			void RemoveAt(size_t idx);
 			T& Get(size_t idx);
 			T& operator [](size_t idx);
+			LinkedList& operator << (const T& data);
+			LinkedList& operator >> (T& data);
 			void Clear();
 			size_t Size();
 		};

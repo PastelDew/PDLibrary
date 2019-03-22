@@ -15,8 +15,8 @@ namespace pdl{
 		PDLDLL_API class MemoryPool {
 		public:
 			typedef struct _MemoryBlock {
-				_MemoryBlock* parentBlock;
-				_MemoryBlock* prevBlock;
+				Ptr<_MemoryBlock> parentBlock;
+				Ptr<_MemoryBlock> prevBlock;
 				size_t length;
 				void* blockAddress;
 			} MemoryBlock;

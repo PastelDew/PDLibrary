@@ -11,7 +11,7 @@ MemoryPool::MemoryPool() {
 
 Ptr<MemoryPool::MemoryBlock> MemoryPool::AllocatePage() {
 	Ptr<MemoryBlock> memBlock((MemoryBlock*) new uint8_t[mBlockSize]);
-	memBlock->parentBlock = memBlock.Referer();
+	memBlock->parentBlock = memBlock;
 	memBlock->prevBlock = nullptr;
 	memBlock->length = mBlockSize - SIZE_OF_MEMORY_BLOCK;
 	memBlock->blockAddress = (void*)((size_t)memBlock.Referer() + SIZE_OF_MEMORY_BLOCK);
@@ -43,9 +43,9 @@ Ptr<MemoryPool::MemoryBlock> MemoryPool::AllocateBlock(size_t size) {
 		newBlock->length = block->length - SIZE_OF_MEMORY_BLOCK - size;
 		newBlock->blockAddress = (void*)((size_t)newBlock.Referer() + SIZE_OF_MEMORY_BLOCK);
 
-		newBlock->prevBlock = block.Referer();
+		newBlock->prevBlock = block;
 		if (nextBlock.IsValid())
-			nextBlock->prevBlock = newBlock.Referer();
+			nextBlock->prevBlock = newBlock;
 
 		block->length = size;
 		mAvailableBlock[newBlock] = newBlock->length;

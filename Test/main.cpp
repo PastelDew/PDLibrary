@@ -2,14 +2,20 @@
 #include "TestSources/TestIncludes.h"
 #include <iostream>
 
+TestBase* testCases[] = {
+	(TestBase*) new TestMemoryPool(),
+	(TestBase*) new TestArrayList(),
+	(TestBase*) new TestLinkedList()
+};
 
 int main(void) {
-	TestBase* testCase;
-	//testCase = (TestBase*) new TestByteRead();
-	//testCase = (TestBase*) new TestMemoryPool();
-	//testCase = (TestBase*) new TestArrayList();
-	testCase = (TestBase*) new TestLinkedList();
-	testCase->Run();
+	LinkedList<Ptr<TestBase>> testCases;
+	testCases << new TestMemoryPool() << new TestArrayList() << new TestLinkedList();
 
+	Ptr<TestBase> testCase;
+	while (testCases.Size()) {
+		testCases >> testCase;
+		testCase->Run();
+	}
 	return 0;
 }

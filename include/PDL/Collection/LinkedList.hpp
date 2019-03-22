@@ -114,6 +114,20 @@ T& LinkedList<T>::operator[](size_t idx) {
 }
 
 template<typename T>
+LinkedList<T>& LinkedList<T>::operator << (const T& data) {
+	T nonConstData = data;
+	Append(nonConstData);
+	return *this;
+}
+
+template<typename T>
+LinkedList<T>& LinkedList<T>::operator >> (T& data) {
+	data = mLast->GetData();
+	RemoveAt(mSize - 1);
+	return *this;
+}
+
+template<typename T>
 void LinkedList<T>::Clear() {
 	while (mSize > 0)
 		RemoveAt(0);
