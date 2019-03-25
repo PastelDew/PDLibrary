@@ -18,6 +18,7 @@ namespace pdl {
 			void Add(T& obj);
 			void Remove(T &obj);
 			void RemoveAt(int index);
+			void RemoveRange(size_t index, size_t size);
 			void Clear();
 			T& Get(int index);
 

@@ -67,6 +67,17 @@ void ArrayList<T>::RemoveAt(int index) {
 }
 
 template<typename T>
+void ArrayList<T>::RemoveRange(size_t index, size_t size) {
+	if (index + size > this->size)
+		throw new Exception("ArrayList<T>::RemoveRange - Out of range!");
+	size_t tailSize = this->size - size - index;
+	if (tailSize > 0)
+		memcpy_s(arrayList.Referer() + index, tailSize, arrayList.Referer() + index + size, tailSize);
+	memset(arrayList.Referer() + index + tailSize, this->size - index - tailSize);
+	this->size -= size;
+}
+
+template<typename T>
 void ArrayList<T>::Clear() {
 	size = 0;
 	capacity = 10;

@@ -17,7 +17,9 @@ Ptr<HTNode<T> > LinkedList<T>::CreateNode() {
 
 template<typename T>
 Ptr<HTNode<T> > LinkedList<T>::GetNode(size_t idx) {
-	if (idx >= this->mSize) return nullptr;
+	if (idx >= this->mSize)
+		throw new Exception("LinkedList<T>::GetNode - Out of index!");
+
 	Ptr<HTNode<T> > node;
 	
 	if (idx < mSize / 2) {
@@ -101,6 +103,45 @@ void LinkedList<T>::RemoveAt(size_t idx) {
 	else this->mLast = head;
 	node->Dispose();
 	this->mSize--;
+}
+
+template<typename T>
+void LinkedList<T>::RemoveRange(size_t idx, size_t size) {
+	if (idx + size > this->mSize)
+		throw new Exception("LinkedList<T>::RemoveRange - Out of size!");
+	Ptr<HTNode<T> > node = GetNode(idx);
+	HTNode<T>* asdf = node.Referer();
+	Ptr<HTNode<T> > prevNode = node->GetHead();
+	Ptr<HTNode<T> > nextNode;
+	size_t tmpSize = size;
+	while (tmpSize-- > 0) {
+		nextNode = node->GetTail();
+		node->Dispose();
+		node = nextNode;
+	}
+	if (!!node) {
+		if (!!prevNode) {
+			prevNode->SetTail(node);
+			node->SetHead(prevNode);
+		}
+		else {
+			mFirst = node;
+			node->SetHead(nullptr);
+		}
+	}
+	else {
+		if (!!prevNode) {
+			mLast = prevNode;
+			prevNode->SetTail(nullptr);
+		}
+		else {
+			this->mFirst = CreateNode();
+			this->mLast = this->mFirst;
+			this->mSize = 0;
+		}
+	}
+	if (this->mSize != 0)
+		this->mSize -= size;
 }
 
 template<typename T>
