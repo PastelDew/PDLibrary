@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -209,6 +209,9 @@ move /Y "$(OutDir)$(TargetName).lib" "$(SolutionDir)libs\$(TargetName).lib"</Com
     <ClInclude Include="PDL\Collection\LinkedList.hpp" />
     <ClInclude Include="PDL\Collection\HTNode.h" />
     <ClInclude Include="PDL\Collection\HTNode.hpp" />
+    <ClInclude Include="PDL\Collection\Serializable.h" />
+    <ClInclude Include="PDL\Collection\Serialize.h" />
+    <ClInclude Include="PDL\Collection\Serialize.hpp" />
     <ClInclude Include="PDL\Debug\Debug.h" />
     <ClInclude Include="PDL\Debug\Exception.h" />
     <ClInclude Include="PDL\Memory\MemoryPool.h" />
@@ -220,6 +223,7 @@ move /Y "$(OutDir)$(TargetName).lib" "$(SolutionDir)libs\$(TargetName).lib"</Com
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PDL\Collection\LinkedList.cpp" />
+    <ClCompile Include="PDL\Collection\Serialize.cpp" />
     <ClCompile Include="PDL\Memory\MemoryPool.cpp" />
     <ClCompile Include="PDL\Memory\RefCount.cpp" />
   </ItemGroup>
