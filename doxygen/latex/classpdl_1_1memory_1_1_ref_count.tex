@@ -1,0 +1,118 @@
+\hypertarget{classpdl_1_1memory_1_1_ref_count}{}\section{pdl\+::memory\+::Ref\+Count Class Reference}
+\label{classpdl_1_1memory_1_1_ref_count}\index{pdl::memory::RefCount@{pdl::memory::RefCount}}
+
+
+{\ttfamily \#include $<$Ref\+Count.\+h$>$}
+
+
+
+Collaboration diagram for pdl\+::memory\+::Ref\+Count\+:
+% FIG 0
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{_p_d_core_8h_ae8c5186e53170509c65eaabab6c2c705}{P\+D\+L\+D\+L\+L\+\_\+\+A\+PI}} void \mbox{\hyperlink{classpdl_1_1memory_1_1_ref_count_abffc81485714db7707b9ce5efed24e03}{Ref}} (void $\ast$ref)
+\item 
+static \mbox{\hyperlink{_p_d_core_8h_ae8c5186e53170509c65eaabab6c2c705}{P\+D\+L\+D\+L\+L\+\_\+\+A\+PI}} \mbox{\hyperlink{namespacepdl_1_1memory_a45ec9ff2bed0efb7e59d152444c867af}{refcnt}} \mbox{\hyperlink{classpdl_1_1memory_1_1_ref_count_a92adccdca9a16af52899759ac2f3ad34}{Unref}} (void $\ast$ref)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpdl_1_1memory_1_1_ref_count_a13c9f5d75a77a5cfd2b3a2ed5a150b14}{Ref\+Count}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{_p_d_core_8h_ae8c5186e53170509c65eaabab6c2c705}{P\+D\+L\+D\+L\+L\+\_\+\+A\+PI}} std\+::map$<$ void $\ast$, \mbox{\hyperlink{namespacepdl_1_1memory_a45ec9ff2bed0efb7e59d152444c867af}{refcnt}} $>$ \mbox{\hyperlink{classpdl_1_1memory_1_1_ref_count_a8c561e2af8806d40e65e477498265302}{R\+E\+F\+\_\+\+C\+O\+U\+NT}} = std\+::map$<$void$\ast$, \mbox{\hyperlink{namespacepdl_1_1memory_a45ec9ff2bed0efb7e59d152444c867af}{refcnt}}$>$()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 11 of file Ref\+Count.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpdl_1_1memory_1_1_ref_count_a13c9f5d75a77a5cfd2b3a2ed5a150b14}\label{classpdl_1_1memory_1_1_ref_count_a13c9f5d75a77a5cfd2b3a2ed5a150b14}} 
+\index{pdl::memory::RefCount@{pdl::memory::RefCount}!RefCount@{RefCount}}
+\index{RefCount@{RefCount}!pdl::memory::RefCount@{pdl::memory::RefCount}}
+\subsubsection{\texorpdfstring{RefCount()}{RefCount()}}
+{\footnotesize\ttfamily pdl\+::memory\+::\+Ref\+Count\+::\+Ref\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 17 of file Ref\+Count.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17 \{\}}
+
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classpdl_1_1memory_1_1_ref_count_abffc81485714db7707b9ce5efed24e03}\label{classpdl_1_1memory_1_1_ref_count_abffc81485714db7707b9ce5efed24e03}} 
+\index{pdl::memory::RefCount@{pdl::memory::RefCount}!Ref@{Ref}}
+\index{Ref@{Ref}!pdl::memory::RefCount@{pdl::memory::RefCount}}
+\subsubsection{\texorpdfstring{Ref()}{Ref()}}
+{\footnotesize\ttfamily void Ref\+Count\+::\+Ref (\begin{DoxyParamCaption}\item[{void $\ast$}]{ref }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 8 of file Ref\+Count.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8                             \{}
+\DoxyCodeLine{9     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpdl_1_1memory_1_1_ref_count_a8c561e2af8806d40e65e477498265302}{REF\_COUNT}}.count(ref) == 0)}
+\DoxyCodeLine{10         \mbox{\hyperlink{classpdl_1_1memory_1_1_ref_count_a8c561e2af8806d40e65e477498265302}{REF\_COUNT}}[ref] = 1;}
+\DoxyCodeLine{11     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{12         \mbox{\hyperlink{classpdl_1_1memory_1_1_ref_count_a8c561e2af8806d40e65e477498265302}{REF\_COUNT}}[ref]++;}
+\DoxyCodeLine{13 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classpdl_1_1memory_1_1_ref_count_a92adccdca9a16af52899759ac2f3ad34}\label{classpdl_1_1memory_1_1_ref_count_a92adccdca9a16af52899759ac2f3ad34}} 
+\index{pdl::memory::RefCount@{pdl::memory::RefCount}!Unref@{Unref}}
+\index{Unref@{Unref}!pdl::memory::RefCount@{pdl::memory::RefCount}}
+\subsubsection{\texorpdfstring{Unref()}{Unref()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepdl_1_1memory_a45ec9ff2bed0efb7e59d152444c867af}{refcnt}} Ref\+Count\+::\+Unref (\begin{DoxyParamCaption}\item[{void $\ast$}]{ref }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 15 of file Ref\+Count.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15                                 \{}
+\DoxyCodeLine{16     \mbox{\hyperlink{namespacepdl_1_1memory_a45ec9ff2bed0efb7e59d152444c867af}{refcnt}} cnt = --\mbox{\hyperlink{classpdl_1_1memory_1_1_ref_count_a8c561e2af8806d40e65e477498265302}{REF\_COUNT}}[ref];}
+\DoxyCodeLine{17     \textcolor{keywordflow}{if} (cnt == 0)}
+\DoxyCodeLine{18         \mbox{\hyperlink{classpdl_1_1memory_1_1_ref_count_a8c561e2af8806d40e65e477498265302}{REF\_COUNT}}.erase(ref);}
+\DoxyCodeLine{19     \textcolor{keywordflow}{return} cnt;}
+\DoxyCodeLine{20 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classpdl_1_1memory_1_1_ref_count_a8c561e2af8806d40e65e477498265302}\label{classpdl_1_1memory_1_1_ref_count_a8c561e2af8806d40e65e477498265302}} 
+\index{pdl::memory::RefCount@{pdl::memory::RefCount}!REF\_COUNT@{REF\_COUNT}}
+\index{REF\_COUNT@{REF\_COUNT}!pdl::memory::RefCount@{pdl::memory::RefCount}}
+\subsubsection{\texorpdfstring{REF\_COUNT}{REF\_COUNT}}
+{\footnotesize\ttfamily std\+::map$<$ void $\ast$, \mbox{\hyperlink{namespacepdl_1_1memory_a45ec9ff2bed0efb7e59d152444c867af}{refcnt}} $>$ Ref\+Count\+::\+R\+E\+F\+\_\+\+C\+O\+U\+NT = std\+::map$<$void$\ast$, \mbox{\hyperlink{namespacepdl_1_1memory_a45ec9ff2bed0efb7e59d152444c867af}{refcnt}}$>$()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 18 of file Ref\+Count.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+\_\+\+My\+Open\+Source\+\_\+/\+P\+D\+Library/\+P\+D\+Library/\+P\+D\+L/\+Memory/\mbox{\hyperlink{_ref_count_8h}{Ref\+Count.\+h}}\item 
+E\+:/\+\_\+\+My\+Open\+Source\+\_\+/\+P\+D\+Library/\+P\+D\+Library/\+P\+D\+L/\+Memory/\mbox{\hyperlink{_ref_count_8cpp}{Ref\+Count.\+cpp}}\end{DoxyCompactItemize}

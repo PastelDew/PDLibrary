@@ -1,0 +1,321 @@
+\hypertarget{classpdl_1_1collection_1_1_array_list}{}\section{pdl\+::collection\+::Array\+List$<$ T $>$ Class Template Reference}
+\label{classpdl_1_1collection_1_1_array_list}\index{pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Array\+List.\+h$>$}
+
+
+
+Collaboration diagram for pdl\+::collection\+::Array\+List$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{classpdl_1_1collection_1_1_array_list__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_aa535c7a760f1ddf3c476825033adf7d0}{Array\+List}} (size\+\_\+t \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a26805e3d3d40d6c2fcdf1f033e06c94b}{capacity}}=10)
+\item 
+void \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a9ac94f5b260417c6c68ef991967f3f2a}{Add}} (T \&obj)
+\item 
+void \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_afceee9863bff0ff905fefcaf8d8f97bc}{Remove}} (T \&obj)
+\item 
+void \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a31a8f4b680ac3fecf7d682d3b6bbac05}{Remove\+At}} (int index)
+\item 
+T \& \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a121f4e45e4278418b449df224791cca2}{Get}} (int index)
+\item 
+size\+\_\+t \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a8003d510edf00a21b01aa28bdfcd6198}{Size}} ()
+\item 
+int \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_adea457c92c7bb5a31c245a934f60bacb}{Index\+Of}} (T \&obj)
+\item 
+T \& \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_aa30db33a42a00a068815ce835bd66bc7}{operator\mbox{[}$\,$\mbox{]}}} (int index)
+\item 
+\mbox{\hyperlink{classpdl_1_1collection_1_1_array_list}{Array\+List}}$<$ T $>$ \& \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a01d5af65852b81f0ed40b1ba25e965d5}{operator$<$$<$}} (T \&obj)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpdl_1_1memory_1_1_ptr}{Ptr}}$<$ T $>$ \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_af5143925fb3985ae181e823fde0ac6a0}{Create\+List}} (size\+\_\+t \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a3406722503a3df38feb4fbfee18c25d0}{size}})
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a3406722503a3df38feb4fbfee18c25d0}{size}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a26805e3d3d40d6c2fcdf1f033e06c94b}{capacity}}
+\item 
+\mbox{\hyperlink{classpdl_1_1memory_1_1_ptr}{Ptr}}$<$ T $>$ \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a8ba11c012c623d0abfc9d8c865c91403}{array\+List}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class pdl\+::collection\+::\+Array\+List$<$ T $>$}
+
+
+
+Definition at line 9 of file Array\+List.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_array_list_aa535c7a760f1ddf3c476825033adf7d0}\label{classpdl_1_1collection_1_1_array_list_aa535c7a760f1ddf3c476825033adf7d0}} 
+\index{pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}!ArrayList@{ArrayList}}
+\index{ArrayList@{ArrayList}!pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}}
+\subsubsection{\texorpdfstring{ArrayList()}{ArrayList()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+Array\+List\+::\+Array\+List (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{capacity = {\ttfamily 10} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 10 of file Array\+List.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10                                        \{}
+\DoxyCodeLine{11     this->\mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a3406722503a3df38feb4fbfee18c25d0}{size}} = 0;}
+\DoxyCodeLine{12     this->\mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a26805e3d3d40d6c2fcdf1f033e06c94b}{capacity}} = \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a26805e3d3d40d6c2fcdf1f033e06c94b}{capacity}};}
+\DoxyCodeLine{13     \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a8ba11c012c623d0abfc9d8c865c91403}{arrayList}} = \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_af5143925fb3985ae181e823fde0ac6a0}{CreateList}}(\mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a26805e3d3d40d6c2fcdf1f033e06c94b}{capacity}});}
+\DoxyCodeLine{14 \}}
+
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_array_list_a9ac94f5b260417c6c68ef991967f3f2a}\label{classpdl_1_1collection_1_1_array_list_a9ac94f5b260417c6c68ef991967f3f2a}} 
+\index{pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}}
+\subsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Array\+List\+::\+Add (\begin{DoxyParamCaption}\item[{T \&}]{obj }\end{DoxyParamCaption})}
+
+
+
+Definition at line 42 of file Array\+List.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{42                              \{}
+\DoxyCodeLine{43     \textcolor{keywordflow}{if} (!this->\mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a8ba11c012c623d0abfc9d8c865c91403}{arrayList}}) \{}
+\DoxyCodeLine{44         \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a3406722503a3df38feb4fbfee18c25d0}{size}} = 1;}
+\DoxyCodeLine{45         \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a26805e3d3d40d6c2fcdf1f033e06c94b}{capacity}} = \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a3406722503a3df38feb4fbfee18c25d0}{size}} * 2;}
+\DoxyCodeLine{46         \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a8ba11c012c623d0abfc9d8c865c91403}{arrayList}} = \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_af5143925fb3985ae181e823fde0ac6a0}{CreateList}}(\mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a26805e3d3d40d6c2fcdf1f033e06c94b}{capacity}});}
+\DoxyCodeLine{47     \}}
+\DoxyCodeLine{48     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a3406722503a3df38feb4fbfee18c25d0}{size}} >= \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a26805e3d3d40d6c2fcdf1f033e06c94b}{capacity}}) \{}
+\DoxyCodeLine{49         \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a26805e3d3d40d6c2fcdf1f033e06c94b}{capacity}} = ++\mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a3406722503a3df38feb4fbfee18c25d0}{size}} * 2;}
+\DoxyCodeLine{50         \mbox{\hyperlink{classpdl_1_1memory_1_1_ptr}{Ptr<T>}} newList = \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_af5143925fb3985ae181e823fde0ac6a0}{CreateList}}(\mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a26805e3d3d40d6c2fcdf1f033e06c94b}{capacity}});}
+\DoxyCodeLine{51         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a3406722503a3df38feb4fbfee18c25d0}{size}} - 1; i++)}
+\DoxyCodeLine{52             newList[i] = \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a8ba11c012c623d0abfc9d8c865c91403}{arrayList}}[i];}
+\DoxyCodeLine{53         this->\mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a8ba11c012c623d0abfc9d8c865c91403}{arrayList}} = newList;}
+\DoxyCodeLine{54     \}}
+\DoxyCodeLine{55     this->\mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a8ba11c012c623d0abfc9d8c865c91403}{arrayList}}[\mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a3406722503a3df38feb4fbfee18c25d0}{size}}++] = obj;}
+\DoxyCodeLine{56 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_array_list_af5143925fb3985ae181e823fde0ac6a0}\label{classpdl_1_1collection_1_1_array_list_af5143925fb3985ae181e823fde0ac6a0}} 
+\index{pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}!CreateList@{CreateList}}
+\index{CreateList@{CreateList}!pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}}
+\subsubsection{\texorpdfstring{CreateList()}{CreateList()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classpdl_1_1memory_1_1_ptr}{Ptr}}$<$ T $>$ Array\+List\+::\+Create\+List (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 17 of file Array\+List.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17                                            \{}
+\DoxyCodeLine{18     \mbox{\hyperlink{classpdl_1_1memory_1_1_ptr}{Ptr<T>}} list;}
+\DoxyCodeLine{19     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a3406722503a3df38feb4fbfee18c25d0}{size}} != 0)}
+\DoxyCodeLine{20         list = MemoryPool::AllocateArray<T>(\mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a3406722503a3df38feb4fbfee18c25d0}{size}});}
+\DoxyCodeLine{21     \textcolor{keywordflow}{return} list;}
+\DoxyCodeLine{22 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_array_list_a121f4e45e4278418b449df224791cca2}\label{classpdl_1_1collection_1_1_array_list_a121f4e45e4278418b449df224791cca2}} 
+\index{pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}!Get@{Get}}
+\index{Get@{Get}!pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}}
+\subsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& Array\+List\+::\+Get (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 76 of file Array\+List.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{76                               \{}
+\DoxyCodeLine{77     \textcolor{keywordflow}{if} (index < 0) index = \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a3406722503a3df38feb4fbfee18c25d0}{size}} - index - 1;}
+\DoxyCodeLine{78     \textcolor{keywordflow}{if} (index < 0 || (\textcolor{keywordtype}{size\_t})index >= \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a26805e3d3d40d6c2fcdf1f033e06c94b}{capacity}})}
+\DoxyCodeLine{79         \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \mbox{\hyperlink{classpdl_1_1debug_1_1_exception}{Exception}}(\textcolor{stringliteral}{"The given index is out of range!"});}
+\DoxyCodeLine{80     \textcolor{keywordflow}{return} \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a8ba11c012c623d0abfc9d8c865c91403}{arrayList}}[index];}
+\DoxyCodeLine{81 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_array_list_adea457c92c7bb5a31c245a934f60bacb}\label{classpdl_1_1collection_1_1_array_list_adea457c92c7bb5a31c245a934f60bacb}} 
+\index{pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}!IndexOf@{IndexOf}}
+\index{IndexOf@{IndexOf}!pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}}
+\subsubsection{\texorpdfstring{IndexOf()}{IndexOf()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int Array\+List\+::\+Index\+Of (\begin{DoxyParamCaption}\item[{T \&}]{obj }\end{DoxyParamCaption})}
+
+
+
+Definition at line 84 of file Array\+List.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{84                                 \{}
+\DoxyCodeLine{85     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a3406722503a3df38feb4fbfee18c25d0}{size}}; i++) \{}
+\DoxyCodeLine{86         \textcolor{keywordflow}{if} (this->\mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a8ba11c012c623d0abfc9d8c865c91403}{arrayList}}[i] == obj)}
+\DoxyCodeLine{87             \textcolor{keywordflow}{return} i;}
+\DoxyCodeLine{88     \}}
+\DoxyCodeLine{89     \textcolor{keywordflow}{return} -1;}
+\DoxyCodeLine{90 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_array_list_a01d5af65852b81f0ed40b1ba25e965d5}\label{classpdl_1_1collection_1_1_array_list_a01d5af65852b81f0ed40b1ba25e965d5}} 
+\index{pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classpdl_1_1collection_1_1_array_list}{Array\+List}}$<$ T $>$ \& Array\+List\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{T \&}]{obj }\end{DoxyParamCaption})}
+
+
+
+Definition at line 35 of file Array\+List.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35                                                    \{}
+\DoxyCodeLine{36     this->\mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a9ac94f5b260417c6c68ef991967f3f2a}{Add}}(\mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a8ba11c012c623d0abfc9d8c865c91403}{arrayList}});}
+\DoxyCodeLine{37     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{38 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_array_list_aa30db33a42a00a068815ce835bd66bc7}\label{classpdl_1_1collection_1_1_array_list_aa30db33a42a00a068815ce835bd66bc7}} 
+\index{pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& Array\+List\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file Array\+List.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30                                      \{}
+\DoxyCodeLine{31     \textcolor{keywordflow}{return} this->\mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a121f4e45e4278418b449df224791cca2}{Get}}(index);}
+\DoxyCodeLine{32 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_array_list_afceee9863bff0ff905fefcaf8d8f97bc}\label{classpdl_1_1collection_1_1_array_list_afceee9863bff0ff905fefcaf8d8f97bc}} 
+\index{pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}!Remove@{Remove}}
+\index{Remove@{Remove}!pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}}
+\subsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Array\+List\+::\+Remove (\begin{DoxyParamCaption}\item[{T \&}]{obj }\end{DoxyParamCaption})}
+
+
+
+Definition at line 59 of file Array\+List.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{59                                 \{}
+\DoxyCodeLine{60     \textcolor{keywordtype}{int} idx = \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_adea457c92c7bb5a31c245a934f60bacb}{IndexOf}}(obj);}
+\DoxyCodeLine{61     \textcolor{keywordflow}{if} (idx < 0) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{62     \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a31a8f4b680ac3fecf7d682d3b6bbac05}{RemoveAt}}(idx);}
+\DoxyCodeLine{63 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_array_list_a31a8f4b680ac3fecf7d682d3b6bbac05}\label{classpdl_1_1collection_1_1_array_list_a31a8f4b680ac3fecf7d682d3b6bbac05}} 
+\index{pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}!RemoveAt@{RemoveAt}}
+\index{RemoveAt@{RemoveAt}!pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}}
+\subsubsection{\texorpdfstring{RemoveAt()}{RemoveAt()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Array\+List\+::\+Remove\+At (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 66 of file Array\+List.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{66                                      \{}
+\DoxyCodeLine{67     \textcolor{keywordflow}{if} (index < 0) index = \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a3406722503a3df38feb4fbfee18c25d0}{size}} - index - 1;}
+\DoxyCodeLine{68     \textcolor{keywordflow}{if} (index < 0 || index >= \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a26805e3d3d40d6c2fcdf1f033e06c94b}{capacity}})}
+\DoxyCodeLine{69         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{70     \textcolor{keywordflow}{while} (index < \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a3406722503a3df38feb4fbfee18c25d0}{size}} - 1)}
+\DoxyCodeLine{71         this->\mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a8ba11c012c623d0abfc9d8c865c91403}{arrayList}}[index] = this->\mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a8ba11c012c623d0abfc9d8c865c91403}{arrayList}}[++index];}
+\DoxyCodeLine{72     this->\mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a8ba11c012c623d0abfc9d8c865c91403}{arrayList}}[\mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a3406722503a3df38feb4fbfee18c25d0}{size}}--] = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{73 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_array_list_a8003d510edf00a21b01aa28bdfcd6198}\label{classpdl_1_1collection_1_1_array_list_a8003d510edf00a21b01aa28bdfcd6198}} 
+\index{pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}!Size@{Size}}
+\index{Size@{Size}!pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}}
+\subsubsection{\texorpdfstring{Size()}{Size()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t Array\+List\+::\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 25 of file Array\+List.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25                           \{}
+\DoxyCodeLine{26     \textcolor{keywordflow}{return} \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list_a3406722503a3df38feb4fbfee18c25d0}{size}};}
+\DoxyCodeLine{27 \}}
+
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_array_list_a8ba11c012c623d0abfc9d8c865c91403}\label{classpdl_1_1collection_1_1_array_list_a8ba11c012c623d0abfc9d8c865c91403}} 
+\index{pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}!arrayList@{arrayList}}
+\index{arrayList@{arrayList}!pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}}
+\subsubsection{\texorpdfstring{arrayList}{arrayList}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{classpdl_1_1memory_1_1_ptr}{Ptr}}$<$T$>$ \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list}{pdl\+::collection\+::\+Array\+List}}$<$ T $>$\+::array\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 12 of file Array\+List.\+h.
+
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_array_list_a26805e3d3d40d6c2fcdf1f033e06c94b}\label{classpdl_1_1collection_1_1_array_list_a26805e3d3d40d6c2fcdf1f033e06c94b}} 
+\index{pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}!capacity@{capacity}}
+\index{capacity@{capacity}!pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}}
+\subsubsection{\texorpdfstring{capacity}{capacity}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+size\+\_\+t \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list}{pdl\+::collection\+::\+Array\+List}}$<$ T $>$\+::capacity\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 11 of file Array\+List.\+h.
+
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_array_list_a3406722503a3df38feb4fbfee18c25d0}\label{classpdl_1_1collection_1_1_array_list_a3406722503a3df38feb4fbfee18c25d0}} 
+\index{pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}!size@{size}}
+\index{size@{size}!pdl::collection::ArrayList$<$ T $>$@{pdl::collection::ArrayList$<$ T $>$}}
+\subsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+size\+\_\+t \mbox{\hyperlink{classpdl_1_1collection_1_1_array_list}{pdl\+::collection\+::\+Array\+List}}$<$ T $>$\+::size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 11 of file Array\+List.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+\_\+\+My\+Open\+Source\+\_\+/\+P\+D\+Library/\+P\+D\+Library/\+P\+D\+L/\+Collection/\mbox{\hyperlink{_array_list_8h}{Array\+List.\+h}}\item 
+E\+:/\+\_\+\+My\+Open\+Source\+\_\+/\+P\+D\+Library/\+P\+D\+Library/\+P\+D\+L/\+Collection/\mbox{\hyperlink{_array_list_8hpp}{Array\+List.\+hpp}}\end{DoxyCompactItemize}

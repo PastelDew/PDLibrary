@@ -1,0 +1,112 @@
+\hypertarget{classpdl_1_1debug_1_1_exception}{}\section{pdl\+::debug\+::Exception Class Reference}
+\label{classpdl_1_1debug_1_1_exception}\index{pdl::debug::Exception@{pdl::debug::Exception}}
+
+
+{\ttfamily \#include $<$Exception.\+h$>$}
+
+
+
+Collaboration diagram for pdl\+::debug\+::Exception\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpdl_1_1debug_1_1_exception_a1a7ab298af60424c50d0ad8a8b35e6d6}{Exception}} (string msg, int err\+Code=0)
+\item 
+string \mbox{\hyperlink{classpdl_1_1debug_1_1_exception_a642cd3b32b4a990c5f6b0e01d99b633b}{Get\+Message}} ()
+\item 
+int \mbox{\hyperlink{classpdl_1_1debug_1_1_exception_a11172b1eb57526050c9f1c47e7ccce1a}{Get\+Error\+Code}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classpdl_1_1debug_1_1_exception_a66c86b5f3835f41fc953c1bae576d39c}{m\+M\+SG}}
+\item 
+int \mbox{\hyperlink{classpdl_1_1debug_1_1_exception_a747e05300740d6f7dc0ddd729a3e07d7}{m\+Error\+Code}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 10 of file Exception.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpdl_1_1debug_1_1_exception_a1a7ab298af60424c50d0ad8a8b35e6d6}\label{classpdl_1_1debug_1_1_exception_a1a7ab298af60424c50d0ad8a8b35e6d6}} 
+\index{pdl::debug::Exception@{pdl::debug::Exception}!Exception@{Exception}}
+\index{Exception@{Exception}!pdl::debug::Exception@{pdl::debug::Exception}}
+\subsubsection{\texorpdfstring{Exception()}{Exception()}}
+{\footnotesize\ttfamily pdl\+::debug\+::\+Exception\+::\+Exception (\begin{DoxyParamCaption}\item[{string}]{msg,  }\item[{int}]{err\+Code = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 15 of file Exception.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16                 : \mbox{\hyperlink{classpdl_1_1debug_1_1_exception_a66c86b5f3835f41fc953c1bae576d39c}{mMSG}}(msg), \mbox{\hyperlink{classpdl_1_1debug_1_1_exception_a747e05300740d6f7dc0ddd729a3e07d7}{mErrorCode}}(errCode) \{\}}
+
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classpdl_1_1debug_1_1_exception_a11172b1eb57526050c9f1c47e7ccce1a}\label{classpdl_1_1debug_1_1_exception_a11172b1eb57526050c9f1c47e7ccce1a}} 
+\index{pdl::debug::Exception@{pdl::debug::Exception}!GetErrorCode@{GetErrorCode}}
+\index{GetErrorCode@{GetErrorCode}!pdl::debug::Exception@{pdl::debug::Exception}}
+\subsubsection{\texorpdfstring{GetErrorCode()}{GetErrorCode()}}
+{\footnotesize\ttfamily int pdl\+::debug\+::\+Exception\+::\+Get\+Error\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 18 of file Exception.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classpdl_1_1debug_1_1_exception_a747e05300740d6f7dc0ddd729a3e07d7}{mErrorCode}}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpdl_1_1debug_1_1_exception_a642cd3b32b4a990c5f6b0e01d99b633b}\label{classpdl_1_1debug_1_1_exception_a642cd3b32b4a990c5f6b0e01d99b633b}} 
+\index{pdl::debug::Exception@{pdl::debug::Exception}!GetMessage@{GetMessage}}
+\index{GetMessage@{GetMessage}!pdl::debug::Exception@{pdl::debug::Exception}}
+\subsubsection{\texorpdfstring{GetMessage()}{GetMessage()}}
+{\footnotesize\ttfamily string pdl\+::debug\+::\+Exception\+::\+Get\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 17 of file Exception.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classpdl_1_1debug_1_1_exception_a66c86b5f3835f41fc953c1bae576d39c}{mMSG}}; \}}
+
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classpdl_1_1debug_1_1_exception_a747e05300740d6f7dc0ddd729a3e07d7}\label{classpdl_1_1debug_1_1_exception_a747e05300740d6f7dc0ddd729a3e07d7}} 
+\index{pdl::debug::Exception@{pdl::debug::Exception}!mErrorCode@{mErrorCode}}
+\index{mErrorCode@{mErrorCode}!pdl::debug::Exception@{pdl::debug::Exception}}
+\subsubsection{\texorpdfstring{mErrorCode}{mErrorCode}}
+{\footnotesize\ttfamily int pdl\+::debug\+::\+Exception\+::m\+Error\+Code\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 13 of file Exception.\+h.
+
+\mbox{\Hypertarget{classpdl_1_1debug_1_1_exception_a66c86b5f3835f41fc953c1bae576d39c}\label{classpdl_1_1debug_1_1_exception_a66c86b5f3835f41fc953c1bae576d39c}} 
+\index{pdl::debug::Exception@{pdl::debug::Exception}!mMSG@{mMSG}}
+\index{mMSG@{mMSG}!pdl::debug::Exception@{pdl::debug::Exception}}
+\subsubsection{\texorpdfstring{mMSG}{mMSG}}
+{\footnotesize\ttfamily string pdl\+::debug\+::\+Exception\+::m\+M\+SG\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 12 of file Exception.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+\_\+\+My\+Open\+Source\+\_\+/\+P\+D\+Library/\+P\+D\+Library/\+P\+D\+L/\+Debug/\mbox{\hyperlink{_exception_8h}{Exception.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,404 @@
+\hypertarget{classpdl_1_1collection_1_1_linked_list}{}\section{pdl\+::collection\+::Linked\+List$<$ T $>$ Class Template Reference}
+\label{classpdl_1_1collection_1_1_linked_list}\index{pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Linked\+List.\+h$>$}
+
+
+
+Collaboration diagram for pdl\+::collection\+::Linked\+List$<$ T $>$\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_afe7f78983e173f8018927cf2ad11a5aa}{Linked\+List}} ()
+\item 
+void \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_a478953321bd845ad68ad5a9ed7099107}{Insert}} (T \&data, size\+\_\+t idx)
+\item 
+void \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_a3964123b90998cea595c10d100aa4a5e}{Append}} (T \&data)
+\item 
+void \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_aaf58dfcc200a78f9e6144661cc8bb092}{Remove}} (T \&data)
+\item 
+void \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_a2fcd40e9bcdf71f6acd2bb79fe8eacde}{Remove\+At}} (size\+\_\+t idx)
+\item 
+T \& \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_a7544f02aaf2790960f2191fd4d137764}{Get}} (size\+\_\+t idx)
+\item 
+T \& \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_a2a423e07aaafdb74ae9b5d72ebb4d025}{operator \mbox{[}$\,$\mbox{]}}} (size\+\_\+t idx)
+\item 
+\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list}{Linked\+List}} \& \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_a0e4a9cc77ee954f9d1d3e3dc8f41bbbe}{operator$<$$<$}} (const T \&data)
+\item 
+\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list}{Linked\+List}} \& \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_aad3fc3e875b9b06582ae6ac020e30281}{operator $>$$>$}} (T \&data)
+\item 
+void \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_a3d56da0f6e395184f18996fdbe6f493f}{Clear}} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_a1262de4a576f36a22c286005e00e0a1f}{Size}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpdl_1_1memory_1_1_ptr}{Ptr}}$<$ \mbox{\hyperlink{classpdl_1_1collection_1_1_h_t_node}{H\+T\+Node}}$<$ T $>$ $>$ \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_a1cf7dc015f110f3a287b85f8e5cbcbeb}{Create\+Node}} ()
+\item 
+\mbox{\hyperlink{classpdl_1_1memory_1_1_ptr}{Ptr}}$<$ \mbox{\hyperlink{classpdl_1_1collection_1_1_h_t_node}{H\+T\+Node}}$<$ T $>$ $>$ \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_ae3dd2c2ba1b4e01fa3b5685d933a4ab5}{Get\+Node}} (size\+\_\+t idx)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpdl_1_1memory_1_1_ptr}{Ptr}}$<$ \mbox{\hyperlink{classpdl_1_1collection_1_1_h_t_node}{H\+T\+Node}}$<$ T $>$ $>$ \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_addbc44970dd86c1612ff342fd8d6678e}{m\+First}}
+\item 
+\mbox{\hyperlink{classpdl_1_1memory_1_1_ptr}{Ptr}}$<$ \mbox{\hyperlink{classpdl_1_1collection_1_1_h_t_node}{H\+T\+Node}}$<$ T $>$ $>$ \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_a4a9717f1b3412f636c16ec7b5654376f}{m\+Last}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_ad15deaf5bbdc32d4efe316468f9a5f32}{m\+Size}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class pdl\+::collection\+::\+Linked\+List$<$ T $>$}
+
+
+
+Definition at line 9 of file Linked\+List.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_afe7f78983e173f8018927cf2ad11a5aa}\label{classpdl_1_1collection_1_1_linked_list_afe7f78983e173f8018927cf2ad11a5aa}} 
+\index{pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}!LinkedList@{LinkedList}}
+\index{LinkedList@{LinkedList}!pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}}
+\subsubsection{\texorpdfstring{LinkedList()}{LinkedList()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+Linked\+List\+::\+Linked\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 7 of file Linked\+List.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{7                           \{}
+\DoxyCodeLine{8     this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_addbc44970dd86c1612ff342fd8d6678e}{mFirst}} = \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_a1cf7dc015f110f3a287b85f8e5cbcbeb}{CreateNode}}();}
+\DoxyCodeLine{9     this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_a4a9717f1b3412f636c16ec7b5654376f}{mLast}} = this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_addbc44970dd86c1612ff342fd8d6678e}{mFirst}};}
+\DoxyCodeLine{10     this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_ad15deaf5bbdc32d4efe316468f9a5f32}{mSize}} = 0;}
+\DoxyCodeLine{11 \}}
+
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_a3964123b90998cea595c10d100aa4a5e}\label{classpdl_1_1collection_1_1_linked_list_a3964123b90998cea595c10d100aa4a5e}} 
+\index{pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}!Append@{Append}}
+\index{Append@{Append}!pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}}
+\subsubsection{\texorpdfstring{Append()}{Append()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Linked\+List\+::\+Append (\begin{DoxyParamCaption}\item[{T \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 54 of file Linked\+List.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54                                   \{}
+\DoxyCodeLine{55     \mbox{\hyperlink{classpdl_1_1memory_1_1_ptr}{Ptr<HTNode<T>}} > newNode;}
+\DoxyCodeLine{56     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_ad15deaf5bbdc32d4efe316468f9a5f32}{mSize}} == 0)}
+\DoxyCodeLine{57         newNode = this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_addbc44970dd86c1612ff342fd8d6678e}{mFirst}};}
+\DoxyCodeLine{58     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{59         newNode = \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_a1cf7dc015f110f3a287b85f8e5cbcbeb}{CreateNode}}();}
+\DoxyCodeLine{60         newNode->SetHead(this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_a4a9717f1b3412f636c16ec7b5654376f}{mLast}});}
+\DoxyCodeLine{61     \}}
+\DoxyCodeLine{62     newNode->SetData(data);}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64     \textcolor{keywordflow}{if} (this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_ad15deaf5bbdc32d4efe316468f9a5f32}{mSize}} > 0)}
+\DoxyCodeLine{65         this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_a4a9717f1b3412f636c16ec7b5654376f}{mLast}}->SetTail(newNode);}
+\DoxyCodeLine{66     }
+\DoxyCodeLine{67     this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_a4a9717f1b3412f636c16ec7b5654376f}{mLast}} = newNode;}
+\DoxyCodeLine{68     this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_ad15deaf5bbdc32d4efe316468f9a5f32}{mSize}}++;}
+\DoxyCodeLine{69 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_a3d56da0f6e395184f18996fdbe6f493f}\label{classpdl_1_1collection_1_1_linked_list_a3d56da0f6e395184f18996fdbe6f493f}} 
+\index{pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}!Clear@{Clear}}
+\index{Clear@{Clear}!pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Linked\+List\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 131 of file Linked\+List.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{131                           \{}
+\DoxyCodeLine{132     \textcolor{keywordflow}{while} (\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_ad15deaf5bbdc32d4efe316468f9a5f32}{mSize}} > 0)}
+\DoxyCodeLine{133         \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_a2fcd40e9bcdf71f6acd2bb79fe8eacde}{RemoveAt}}(0);}
+\DoxyCodeLine{134 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_a1cf7dc015f110f3a287b85f8e5cbcbeb}\label{classpdl_1_1collection_1_1_linked_list_a1cf7dc015f110f3a287b85f8e5cbcbeb}} 
+\index{pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}!CreateNode@{CreateNode}}
+\index{CreateNode@{CreateNode}!pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}}
+\subsubsection{\texorpdfstring{CreateNode()}{CreateNode()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classpdl_1_1memory_1_1_ptr}{Ptr}}$<$ \mbox{\hyperlink{classpdl_1_1collection_1_1_h_t_node}{H\+T\+Node}}$<$ T $>$ $>$ Linked\+List\+::\+Create\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 14 of file Linked\+List.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{14                                           \{}
+\DoxyCodeLine{15     \textcolor{keywordflow}{return} MemoryPool::Allocate<HTNode<T> >();}
+\DoxyCodeLine{16 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_a7544f02aaf2790960f2191fd4d137764}\label{classpdl_1_1collection_1_1_linked_list_a7544f02aaf2790960f2191fd4d137764}} 
+\index{pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}!Get@{Get}}
+\index{Get@{Get}!pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}}
+\subsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& Linked\+List\+::\+Get (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption})}
+
+
+
+Definition at line 107 of file Linked\+List.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{107                                 \{}
+\DoxyCodeLine{108     \textcolor{keywordflow}{return} \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_ae3dd2c2ba1b4e01fa3b5685d933a4ab5}{GetNode}}(idx)->GetData();}
+\DoxyCodeLine{109 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_ae3dd2c2ba1b4e01fa3b5685d933a4ab5}\label{classpdl_1_1collection_1_1_linked_list_ae3dd2c2ba1b4e01fa3b5685d933a4ab5}} 
+\index{pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}!GetNode@{GetNode}}
+\index{GetNode@{GetNode}!pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}}
+\subsubsection{\texorpdfstring{GetNode()}{GetNode()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classpdl_1_1memory_1_1_ptr}{Ptr}}$<$ \mbox{\hyperlink{classpdl_1_1collection_1_1_h_t_node}{H\+T\+Node}}$<$ T $>$ $>$ Linked\+List\+::\+Get\+Node (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 19 of file Linked\+List.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19                                                  \{}
+\DoxyCodeLine{20     \textcolor{keywordflow}{if} (idx >= this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_ad15deaf5bbdc32d4efe316468f9a5f32}{mSize}}) \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{21     \mbox{\hyperlink{classpdl_1_1memory_1_1_ptr}{Ptr<HTNode<T>}} > node;}
+\DoxyCodeLine{22     }
+\DoxyCodeLine{23     \textcolor{keywordflow}{if} (idx < \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_ad15deaf5bbdc32d4efe316468f9a5f32}{mSize}} / 2) \{}
+\DoxyCodeLine{24         node = this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_addbc44970dd86c1612ff342fd8d6678e}{mFirst}};}
+\DoxyCodeLine{25         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < idx; i++)}
+\DoxyCodeLine{26             node = node->GetTail();}
+\DoxyCodeLine{27     \}}
+\DoxyCodeLine{28     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{29         node = this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_a4a9717f1b3412f636c16ec7b5654376f}{mLast}};}
+\DoxyCodeLine{30         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_ad15deaf5bbdc32d4efe316468f9a5f32}{mSize}} - 1; i > idx; i--)}
+\DoxyCodeLine{31             node = node->GetHead();}
+\DoxyCodeLine{32     \}}
+\DoxyCodeLine{33     }
+\DoxyCodeLine{34     \textcolor{keywordflow}{return} node;}
+\DoxyCodeLine{35 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_a478953321bd845ad68ad5a9ed7099107}\label{classpdl_1_1collection_1_1_linked_list_a478953321bd845ad68ad5a9ed7099107}} 
+\index{pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}!Insert@{Insert}}
+\index{Insert@{Insert}!pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}}
+\subsubsection{\texorpdfstring{Insert()}{Insert()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Linked\+List\+::\+Insert (\begin{DoxyParamCaption}\item[{T \&}]{data,  }\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file Linked\+List.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38                                               \{}
+\DoxyCodeLine{39     \textcolor{keywordflow}{if} (idx == this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_ad15deaf5bbdc32d4efe316468f9a5f32}{mSize}} \&\& this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_ad15deaf5bbdc32d4efe316468f9a5f32}{mSize}} == 0) \{ this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_a3964123b90998cea595c10d100aa4a5e}{Append}}(data); \textcolor{keywordflow}{return}; \}}
+\DoxyCodeLine{40     \textcolor{keywordflow}{if} (idx >= this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_ad15deaf5bbdc32d4efe316468f9a5f32}{mSize}}) \textcolor{keywordflow}{throw} \textcolor{keyword}{new} Exception(\textcolor{stringliteral}{"List-Add Failed. The required index is larger than list size."});}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \mbox{\hyperlink{classpdl_1_1memory_1_1_ptr}{Ptr<HTNode<T>}} > node = this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_addbc44970dd86c1612ff342fd8d6678e}{mFirst}};}
+\DoxyCodeLine{43     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i <= idx; i++) node = node->GetTail();}
+\DoxyCodeLine{44     \mbox{\hyperlink{classpdl_1_1memory_1_1_ptr}{Ptr<HTNode<T>}} > newNode = \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_a1cf7dc015f110f3a287b85f8e5cbcbeb}{CreateNode}}();}
+\DoxyCodeLine{45     newNode->SetData(data);}
+\DoxyCodeLine{46     newNode->SetHead(node->GetHead());}
+\DoxyCodeLine{47     newNode->SetTail(node);}
+\DoxyCodeLine{48     node->GetHead()->SetTail(newNode);}
+\DoxyCodeLine{49     node->SetHead(newNode);}
+\DoxyCodeLine{50     this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_ad15deaf5bbdc32d4efe316468f9a5f32}{mSize}}++;}
+\DoxyCodeLine{51 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_aad3fc3e875b9b06582ae6ac020e30281}\label{classpdl_1_1collection_1_1_linked_list_aad3fc3e875b9b06582ae6ac020e30281}} 
+\index{pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}!operator $>$$>$@{operator $>$$>$}}
+\index{operator $>$$>$@{operator $>$$>$}!pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}}
+\subsubsection{\texorpdfstring{operator $>$$>$()}{operator >>()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list}{Linked\+List}}$<$ T $>$ \& Linked\+List\+::operator $>$$>$ (\begin{DoxyParamCaption}\item[{T \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 124 of file Linked\+List.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{124                                                   \{}
+\DoxyCodeLine{125     data = \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_a4a9717f1b3412f636c16ec7b5654376f}{mLast}}->GetData();}
+\DoxyCodeLine{126     \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_a2fcd40e9bcdf71f6acd2bb79fe8eacde}{RemoveAt}}(\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_ad15deaf5bbdc32d4efe316468f9a5f32}{mSize}} - 1);}
+\DoxyCodeLine{127     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{128 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_a2a423e07aaafdb74ae9b5d72ebb4d025}\label{classpdl_1_1collection_1_1_linked_list_a2a423e07aaafdb74ae9b5d72ebb4d025}} 
+\index{pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}!operator \mbox{[}\mbox{]}@{operator []}}
+\index{operator \mbox{[}\mbox{]}@{operator []}!pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}}
+\subsubsection{\texorpdfstring{operator []()}{operator []()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list}{pdl\+::collection\+::\+Linked\+List}}$<$ T $>$\+::operator \mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_a0e4a9cc77ee954f9d1d3e3dc8f41bbbe}\label{classpdl_1_1collection_1_1_linked_list_a0e4a9cc77ee954f9d1d3e3dc8f41bbbe}} 
+\index{pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list}{Linked\+List}}$<$ T $>$ \& Linked\+List\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{const T \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 117 of file Linked\+List.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{117                                                         \{}
+\DoxyCodeLine{118     T nonConstData = data;}
+\DoxyCodeLine{119     \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_a3964123b90998cea595c10d100aa4a5e}{Append}}(nonConstData);}
+\DoxyCodeLine{120     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{121 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_aaf58dfcc200a78f9e6144661cc8bb092}\label{classpdl_1_1collection_1_1_linked_list_aaf58dfcc200a78f9e6144661cc8bb092}} 
+\index{pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}!Remove@{Remove}}
+\index{Remove@{Remove}!pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}}
+\subsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Linked\+List\+::\+Remove (\begin{DoxyParamCaption}\item[{T \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 72 of file Linked\+List.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{72                                    \{}
+\DoxyCodeLine{73     \textcolor{keywordtype}{size\_t} i = 0;}
+\DoxyCodeLine{74     \mbox{\hyperlink{classpdl_1_1memory_1_1_ptr}{Ptr<HTNode<T>}} > node = this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_addbc44970dd86c1612ff342fd8d6678e}{mFirst}};}
+\DoxyCodeLine{75     \textcolor{keywordflow}{while}(!!node->GetTail()) \{}
+\DoxyCodeLine{76         \textcolor{keywordflow}{if} (node->GetData()->\mbox{\hyperlink{classpdl_1_1memory_1_1_ptr_a71ca948c9a456d495024b7f083ba6bbf}{Ref}}() == \&data) \{}
+\DoxyCodeLine{77             node->GetHead()->SetTail(node->GetTail());}
+\DoxyCodeLine{78             node->GetTail()->SetHead(node->GetHead());}
+\DoxyCodeLine{79             this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_ad15deaf5bbdc32d4efe316468f9a5f32}{mSize}}--;}
+\DoxyCodeLine{80         \}}
+\DoxyCodeLine{81         node = node->GetTail();}
+\DoxyCodeLine{82         i++;}
+\DoxyCodeLine{83     \}}
+\DoxyCodeLine{84 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_a2fcd40e9bcdf71f6acd2bb79fe8eacde}\label{classpdl_1_1collection_1_1_linked_list_a2fcd40e9bcdf71f6acd2bb79fe8eacde}} 
+\index{pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}!RemoveAt@{RemoveAt}}
+\index{RemoveAt@{RemoveAt}!pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}}
+\subsubsection{\texorpdfstring{RemoveAt()}{RemoveAt()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Linked\+List\+::\+Remove\+At (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption})}
+
+
+
+Definition at line 87 of file Linked\+List.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{87                                        \{}
+\DoxyCodeLine{88     \textcolor{keywordflow}{if} (idx >= (\textcolor{keywordtype}{int})this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_ad15deaf5bbdc32d4efe316468f9a5f32}{mSize}}) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{89     \textcolor{keywordflow}{if} (mSize == 1) \{}
+\DoxyCodeLine{90         this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_addbc44970dd86c1612ff342fd8d6678e}{mFirst}} = \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_a1cf7dc015f110f3a287b85f8e5cbcbeb}{CreateNode}}();}
+\DoxyCodeLine{91         this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_a4a9717f1b3412f636c16ec7b5654376f}{mLast}} = this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_addbc44970dd86c1612ff342fd8d6678e}{mFirst}};}
+\DoxyCodeLine{92         this->mSize = 0;}
+\DoxyCodeLine{93         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{94     \}}
+\DoxyCodeLine{95     \mbox{\hyperlink{classpdl_1_1memory_1_1_ptr}{Ptr<HTNode<T>}} > node = \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_ae3dd2c2ba1b4e01fa3b5685d933a4ab5}{GetNode}}(idx);}
+\DoxyCodeLine{96     \mbox{\hyperlink{classpdl_1_1memory_1_1_ptr}{Ptr<HTNode<T>}} > head = node->GetHead();}
+\DoxyCodeLine{97     \mbox{\hyperlink{classpdl_1_1memory_1_1_ptr}{Ptr<HTNode<T>}} > tail = node->GetTail();}
+\DoxyCodeLine{98     \textcolor{keywordflow}{if} (!!head) head->SetTail(tail);}
+\DoxyCodeLine{99     \textcolor{keywordflow}{else} this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_addbc44970dd86c1612ff342fd8d6678e}{mFirst}} = tail;}
+\DoxyCodeLine{100     \textcolor{keywordflow}{if} (!!tail) tail->SetHead(head);}
+\DoxyCodeLine{101     \textcolor{keywordflow}{else} this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_a4a9717f1b3412f636c16ec7b5654376f}{mLast}} = head;}
+\DoxyCodeLine{102     node->Dispose();}
+\DoxyCodeLine{103     this->mSize--;}
+\DoxyCodeLine{104 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_a1262de4a576f36a22c286005e00e0a1f}\label{classpdl_1_1collection_1_1_linked_list_a1262de4a576f36a22c286005e00e0a1f}} 
+\index{pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}!Size@{Size}}
+\index{Size@{Size}!pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}}
+\subsubsection{\texorpdfstring{Size()}{Size()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t Linked\+List\+::\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 137 of file Linked\+List.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{137                            \{}
+\DoxyCodeLine{138     \textcolor{keywordflow}{return} this->\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list_ad15deaf5bbdc32d4efe316468f9a5f32}{mSize}};}
+\DoxyCodeLine{139 \}}
+
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_addbc44970dd86c1612ff342fd8d6678e}\label{classpdl_1_1collection_1_1_linked_list_addbc44970dd86c1612ff342fd8d6678e}} 
+\index{pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}!mFirst@{mFirst}}
+\index{mFirst@{mFirst}!pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}}
+\subsubsection{\texorpdfstring{mFirst}{mFirst}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classpdl_1_1memory_1_1_ptr}{Ptr}}$<$\mbox{\hyperlink{classpdl_1_1collection_1_1_h_t_node}{H\+T\+Node}}$<$T$>$ $>$ \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list}{pdl\+::collection\+::\+Linked\+List}}$<$ T $>$\+::m\+First\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 11 of file Linked\+List.\+h.
+
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_a4a9717f1b3412f636c16ec7b5654376f}\label{classpdl_1_1collection_1_1_linked_list_a4a9717f1b3412f636c16ec7b5654376f}} 
+\index{pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}!mLast@{mLast}}
+\index{mLast@{mLast}!pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}}
+\subsubsection{\texorpdfstring{mLast}{mLast}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classpdl_1_1memory_1_1_ptr}{Ptr}}$<$\mbox{\hyperlink{classpdl_1_1collection_1_1_h_t_node}{H\+T\+Node}}$<$T$>$ $>$ \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list}{pdl\+::collection\+::\+Linked\+List}}$<$ T $>$\+::m\+Last\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 12 of file Linked\+List.\+h.
+
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_ad15deaf5bbdc32d4efe316468f9a5f32}\label{classpdl_1_1collection_1_1_linked_list_ad15deaf5bbdc32d4efe316468f9a5f32}} 
+\index{pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}!mSize@{mSize}}
+\index{mSize@{mSize}!pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}}
+\subsubsection{\texorpdfstring{mSize}{mSize}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list}{pdl\+::collection\+::\+Linked\+List}}$<$ T $>$\+::m\+Size\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 13 of file Linked\+List.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+\_\+\+My\+Open\+Source\+\_\+/\+P\+D\+Library/\+P\+D\+Library/\+P\+D\+L/\+Collection/\mbox{\hyperlink{_linked_list_8h}{Linked\+List.\+h}}\item 
+E\+:/\+\_\+\+My\+Open\+Source\+\_\+/\+P\+D\+Library/\+P\+D\+Library/\+P\+D\+L/\+Collection/\mbox{\hyperlink{_linked_list_8hpp}{Linked\+List.\+hpp}}\end{DoxyCompactItemize}

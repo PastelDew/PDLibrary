@@ -1,0 +1,76 @@
+\hypertarget{classpdl_1_1collection_1_1_linked_list}{}\section{pdl\+::collection\+::Linked\+List$<$ T $>$ Class Template Reference}
+\label{classpdl_1_1collection_1_1_linked_list}\index{pdl::collection::LinkedList$<$ T $>$@{pdl::collection::LinkedList$<$ T $>$}}
+
+
+Collaboration diagram for pdl\+::collection\+::Linked\+List$<$ T $>$\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_a478953321bd845ad68ad5a9ed7099107}\label{classpdl_1_1collection_1_1_linked_list_a478953321bd845ad68ad5a9ed7099107}} 
+void {\bfseries Insert} (T \&data, size\+\_\+t idx)
+\item 
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_a3964123b90998cea595c10d100aa4a5e}\label{classpdl_1_1collection_1_1_linked_list_a3964123b90998cea595c10d100aa4a5e}} 
+void {\bfseries Append} (T \&data)
+\item 
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_aaf58dfcc200a78f9e6144661cc8bb092}\label{classpdl_1_1collection_1_1_linked_list_aaf58dfcc200a78f9e6144661cc8bb092}} 
+void {\bfseries Remove} (T \&data)
+\item 
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_a2fcd40e9bcdf71f6acd2bb79fe8eacde}\label{classpdl_1_1collection_1_1_linked_list_a2fcd40e9bcdf71f6acd2bb79fe8eacde}} 
+void {\bfseries Remove\+At} (size\+\_\+t idx)
+\item 
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_a7544f02aaf2790960f2191fd4d137764}\label{classpdl_1_1collection_1_1_linked_list_a7544f02aaf2790960f2191fd4d137764}} 
+T \& {\bfseries Get} (size\+\_\+t idx)
+\item 
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_a2a423e07aaafdb74ae9b5d72ebb4d025}\label{classpdl_1_1collection_1_1_linked_list_a2a423e07aaafdb74ae9b5d72ebb4d025}} 
+T \& {\bfseries operator \mbox{[}$\,$\mbox{]}} (size\+\_\+t idx)
+\item 
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_a0e4a9cc77ee954f9d1d3e3dc8f41bbbe}\label{classpdl_1_1collection_1_1_linked_list_a0e4a9cc77ee954f9d1d3e3dc8f41bbbe}} 
+\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list}{Linked\+List}} \& {\bfseries operator$<$$<$} (const T \&data)
+\item 
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_aad3fc3e875b9b06582ae6ac020e30281}\label{classpdl_1_1collection_1_1_linked_list_aad3fc3e875b9b06582ae6ac020e30281}} 
+\mbox{\hyperlink{classpdl_1_1collection_1_1_linked_list}{Linked\+List}} \& {\bfseries operator $>$$>$} (T \&data)
+\item 
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_a3d56da0f6e395184f18996fdbe6f493f}\label{classpdl_1_1collection_1_1_linked_list_a3d56da0f6e395184f18996fdbe6f493f}} 
+void {\bfseries Clear} ()
+\item 
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_a1262de4a576f36a22c286005e00e0a1f}\label{classpdl_1_1collection_1_1_linked_list_a1262de4a576f36a22c286005e00e0a1f}} 
+size\+\_\+t {\bfseries Size} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_a1cf7dc015f110f3a287b85f8e5cbcbeb}\label{classpdl_1_1collection_1_1_linked_list_a1cf7dc015f110f3a287b85f8e5cbcbeb}} 
+\mbox{\hyperlink{classpdl_1_1memory_1_1_ptr}{Ptr}}$<$ \mbox{\hyperlink{classpdl_1_1collection_1_1_h_t_node}{H\+T\+Node}}$<$ T $>$ $>$ {\bfseries Create\+Node} ()
+\item 
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_ae3dd2c2ba1b4e01fa3b5685d933a4ab5}\label{classpdl_1_1collection_1_1_linked_list_ae3dd2c2ba1b4e01fa3b5685d933a4ab5}} 
+\mbox{\hyperlink{classpdl_1_1memory_1_1_ptr}{Ptr}}$<$ \mbox{\hyperlink{classpdl_1_1collection_1_1_h_t_node}{H\+T\+Node}}$<$ T $>$ $>$ {\bfseries Get\+Node} (size\+\_\+t idx)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_addbc44970dd86c1612ff342fd8d6678e}\label{classpdl_1_1collection_1_1_linked_list_addbc44970dd86c1612ff342fd8d6678e}} 
+\mbox{\hyperlink{classpdl_1_1memory_1_1_ptr}{Ptr}}$<$ \mbox{\hyperlink{classpdl_1_1collection_1_1_h_t_node}{H\+T\+Node}}$<$ T $>$ $>$ {\bfseries m\+First}
+\item 
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_a4a9717f1b3412f636c16ec7b5654376f}\label{classpdl_1_1collection_1_1_linked_list_a4a9717f1b3412f636c16ec7b5654376f}} 
+\mbox{\hyperlink{classpdl_1_1memory_1_1_ptr}{Ptr}}$<$ \mbox{\hyperlink{classpdl_1_1collection_1_1_h_t_node}{H\+T\+Node}}$<$ T $>$ $>$ {\bfseries m\+Last}
+\item 
+\mbox{\Hypertarget{classpdl_1_1collection_1_1_linked_list_ad15deaf5bbdc32d4efe316468f9a5f32}\label{classpdl_1_1collection_1_1_linked_list_ad15deaf5bbdc32d4efe316468f9a5f32}} 
+size\+\_\+t {\bfseries m\+Size}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class pdl\+::collection\+::\+Linked\+List$<$ T $>$}
+
+
+
+Definition at line 9 of file Linked\+List.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+\_\+\+My\+Open\+Source\+\_\+/\+P\+D\+Library/\+P\+D\+Library/\+P\+D\+L/\+Collection/Linked\+List.\+h\item 
+E\+:/\+\_\+\+My\+Open\+Source\+\_\+/\+P\+D\+Library/\+P\+D\+Library/\+P\+D\+L/\+Collection/Linked\+List.\+hpp\end{DoxyCompactItemize}
