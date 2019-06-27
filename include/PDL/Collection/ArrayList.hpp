@@ -40,16 +40,10 @@ ArrayList<T>& ArrayList<T>::operator<<(T& arrayList) {
 
 template<typename T>
 void ArrayList<T>::Add(T& obj) {
-	if (!this->arrayList) {
-		size = 1;
-		capacity = size * 2;
-		arrayList = CreateList(capacity);
-	}
 	if (size >= capacity) {
-		capacity = ++size * 2;
+		capacity = (size + 1) * 2;
 		Ptr<T> newList = CreateList(capacity);
-		for (size_t i = 0; i < size - 1; i++)
-			newList[i] = arrayList[i];
+		memcpy_s(newList.Referer(), size, arrayList.Referer(), size);
 		this->arrayList = newList;
 	}
 	this->arrayList[size++] = obj;
@@ -70,6 +64,13 @@ void ArrayList<T>::RemoveAt(int index) {
 	while (index < size - 1)
 		this->arrayList[index] = this->arrayList[++index];
 	this->arrayList[size--] = nullptr;
+}
+
+template<typename T>
+void ArrayList<T>::Clear() {
+	size = 0;
+	capacity = 10;
+	arrayList = CreateList(capacity);
 }
 
 template<typename T>
