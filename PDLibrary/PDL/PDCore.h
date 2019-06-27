@@ -23,7 +23,7 @@
 #define PDL_VERSION 0.0.1
 
 #include <stdint.h>
-#include <atlimage.h>
+//#include <atlimage.h>
 #include <iostream>
 
 #include "Memory/Ptr.h"
