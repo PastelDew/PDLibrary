@@ -2,3 +2,5 @@
 temp/
 *.sdf
 .vs/
+bin/
+build/
