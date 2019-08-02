@@ -1,5 +1,4 @@
-#include "pch.h"
-#include "TestSources/TestIncludes.h"
+#include "include/TestIncludes.h"
 #include <iostream>
 
 int main(void) {

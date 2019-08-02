@@ -1,0 +1,25 @@
+[
+{
+  "directory": "e:/_MyOpenSource_/PDLibrary_CMake/build",
+  "command": "C:\\PROGRA~2\\MICROS~1.0\\VC\\bin\\amd64\\cl.exe   /nologo /TP -DPDL_DLL_EXPORTS -Dlibpdl_EXPORTS -I..\\include   /DWIN32 /D_WINDOWS /W3 /GR /EHsc /D_DEBUG /MDd /Zi /Ob0 /Od /RTC1   /FoPDLibrary\\CMakeFiles\\libpdl.dir\\Collection\\Serialize.cpp.obj /FdTARGET_COMPILE_PDB /FS -c E:\\_MyOpenSource_\\PDLibrary_CMake\\PDLibrary\\Collection\\Serialize.cpp",
+  "file": "E:/_MyOpenSource_/PDLibrary_CMake/PDLibrary/Collection/Serialize.cpp"
+},
+
+{
+  "directory": "e:/_MyOpenSource_/PDLibrary_CMake/build",
+  "command": "C:\\PROGRA~2\\MICROS~1.0\\VC\\bin\\amd64\\cl.exe   /nologo /TP -DPDL_DLL_EXPORTS -Dlibpdl_EXPORTS -I..\\include   /DWIN32 /D_WINDOWS /W3 /GR /EHsc /D_DEBUG /MDd /Zi /Ob0 /Od /RTC1   /FoPDLibrary\\CMakeFiles\\libpdl.dir\\Memory\\MemoryPool.cpp.obj /FdTARGET_COMPILE_PDB /FS -c E:\\_MyOpenSource_\\PDLibrary_CMake\\PDLibrary\\Memory\\MemoryPool.cpp",
+  "file": "E:/_MyOpenSource_/PDLibrary_CMake/PDLibrary/Memory/MemoryPool.cpp"
+},
+
+{
+  "directory": "e:/_MyOpenSource_/PDLibrary_CMake/build",
+  "command": "C:\\PROGRA~2\\MICROS~1.0\\VC\\bin\\amd64\\cl.exe   /nologo /TP -DPDL_DLL_EXPORTS -Dlibpdl_EXPORTS -I..\\include   /DWIN32 /D_WINDOWS /W3 /GR /EHsc /D_DEBUG /MDd /Zi /Ob0 /Od /RTC1   /FoPDLibrary\\CMakeFiles\\libpdl.dir\\Memory\\RefCount.cpp.obj /FdTARGET_COMPILE_PDB /FS -c E:\\_MyOpenSource_\\PDLibrary_CMake\\PDLibrary\\Memory\\RefCount.cpp",
+  "file": "E:/_MyOpenSource_/PDLibrary_CMake/PDLibrary/Memory/RefCount.cpp"
+},
+
+{
+  "directory": "e:/_MyOpenSource_/PDLibrary_CMake/build",
+  "command": "C:\\PROGRA~2\\MICROS~1.0\\VC\\bin\\amd64\\cl.exe   /nologo /TP  -I..\\include   /DWIN32 /D_WINDOWS /W3 /GR /EHsc /D_DEBUG /MDd /Zi /Ob0 /Od /RTC1   /Fotest\\CMakeFiles\\test_exe.dir\\main.cpp.obj /FdTARGET_COMPILE_PDB /FS -c E:\\_MyOpenSource_\\PDLibrary_CMake\\test\\main.cpp",
+  "file": "E:/_MyOpenSource_/PDLibrary_CMake/test/main.cpp"
+}
+]

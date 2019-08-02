@@ -11,13 +11,11 @@ void Serialize::WriteObject(T data) {
 }
 template<typename T>
 Ptr<T> Serialize::ReadObject() {
-	Ptr<T> obj = Create<T>();
+	if (size > buffer.Size())
+		throw new Exception("Serialize::ReadClassType() error - Cannot read class. The buffer size is less than class <T>.");
+	Ptr<T> obj = MemoryPool::Allocate<T>();
 	size_t size = sizeof(T);
-	if (size > GetSize()) throw new Exception("Serialize::ReadClassType() error - Cannot read class. The buffer size is less than class <T>.");
-	unsigned char databuffer = new unsigned char[size];
-	for (int i = 0; i < size; i++)
-		databuffer[i] = ReadUInt8();
-	memcpy(obj.Ref(), databuffer, size);
-	delete databuffer;
-	return obj;
+	uint8_t * pObj = obj.Referer();
+	for (size_t i = 0; i < size; i++)
+		pObj[i] = ReadUInt8();
 }
