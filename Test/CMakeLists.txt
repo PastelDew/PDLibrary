@@ -22,6 +22,7 @@ if(WIN32)
         POST_BUILD
         COMMAND echo mkdir \"${CMAKE_SOURCE_DIR}\\bin\"
         COMMAND echo F|xcopy /Y \"${CMAKE_SOURCE_DIR}\\build\\test\\test_exe.exe\" \"${CMAKE_SOURCE_DIR}\\bin\\test.exe\"
+        COMMAND ${CMAKE_SOURCE_DIR}\\bin\\test.exe
     )
 elseif(APPLE)
 elseif(UNIX)
