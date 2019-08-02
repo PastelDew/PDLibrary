@@ -10,5 +10,6 @@ int main(void) {
 		testCases >> testCase;
 		testCase->Run();
 	}
+	system("pause");
 	return 0;
 }
