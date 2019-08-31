@@ -41,17 +41,32 @@ if(WIN32)
     ADD_CUSTOM_COMMAND(
         TARGET libpdl
         POST_BUILD
-        COMMENT "Copy include files into ${CMAKE_SOURCE_DIR}/include directory."
+        COMMENT "### Copy include files into ${CMAKE_SOURCE_DIR}/include directory. ###"
         COMMAND echo y|rmdir /s \"${CMAKE_SOURCE_DIR}\\include\\pdl\"
         COMMAND mkdir \"${CMAKE_SOURCE_DIR}\\include\\pdl\"
-        COMMAND xcopy /Y \"${CMAKE_SOURCE_DIR}\\PDLibrary\\*.h" "${CMAKE_SOURCE_DIR}\\include\\pdl\\*.h\" /e /h /k /q
-        COMMAND xcopy /Y \"${CMAKE_SOURCE_DIR}\\PDLibrary\\*.hpp" "${CMAKE_SOURCE_DIR}\\include\\pdl\\*.hpp\" /e /h /k /q
+        COMMAND xcopy /Y \"${CMAKE_SOURCE_DIR}\\PDLibrary\\*.h\" \"${CMAKE_SOURCE_DIR}\\include\\pdl\\*.h\" /e /h /k /q
+        COMMAND xcopy /Y \"${CMAKE_SOURCE_DIR}\\PDLibrary\\*.hpp\" \"${CMAKE_SOURCE_DIR}\\include\\pdl\\*.hpp\" /e /h /k /q
         COMMAND echo mkdir \"${CMAKE_SOURCE_DIR}\\bin\"
         COMMAND xcopy /Y \"${CMAKE_SOURCE_DIR}\\build\\PDLibrary\\*.dll\" \"${CMAKE_SOURCE_DIR}\\bin\\*.dll\"
+        COMMENT "### COMMAND FINISHED ###"
     )
 elseif(APPLE)
 elseif(UNIX)
     if(${CMAKE_SYSTEM} MATCHES Linux)
+        ADD_CUSTOM_COMMAND(
+            TARGET libpdl
+            POST_BUILD
+            COMMENT "### Copy include files into ${CMAKE_SOURCE_DIR}/include directory. ###"
+            COMMAND echo rm \"${CMAKE_SOURCE_DIR}\\include\\pdl\" -r
+            COMMAND mkdir \"${CMAKE_SOURCE_DIR}include/pdl\" -p
+            WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/PDLibrary/
+            COMMAND find . -type f -name \"*.h\" | cpio -pdm \"${CMAKE_SOURCE_DIR}/include/pdl/\"
+            COMMAND find . -type f -name \"*.hpp\" | cpio -pdm \"${CMAKE_SOURCE_DIR}/include/pdl/\"
+            COMMAND mkdir \"${CMAKE_SOURCE_DIR}/bin\" -p
+            WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/build/PDLibrary/
+            COMMAND find . -type f -name \"*.so\" -exec cp \"${CMAKE_SOURCE_DIR}/bin/\" {} "\;"
+            COMMENT "### COMMAND FINISHED ###"
+        )
     endif()
 else()
     if(ANDROID OR IOS)

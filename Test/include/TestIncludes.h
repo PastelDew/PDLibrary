@@ -5,5 +5,6 @@
 #include "TestMemoryPool.h"
 #include "TestArrayList.h"
 #include "TestLinkedList.h"
+#include "TestPtr.h"
 
 #endif

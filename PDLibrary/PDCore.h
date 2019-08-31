@@ -4,12 +4,25 @@
 #ifndef _PDL_PDCORE_H_
 #define _PDL_PDCORE_H_
 
+#if defined(__GNUC__) && defined(__unix__)
+
+#define PDLDLL_API __attribute__((__visibility__("default")))
+#define PDLDLL_EXTERN extern "C"
+
+#elif defined(WIN32)
+
 #ifdef PDL_DLL_EXPORTS
+
 #define PDLDLL_API __declspec(dllexport)
 #define PDLDLL_EXTERN
+
 #else
+
 #define PDLDLL_API __declspec(dllimport)
 #define PDLDLL_EXTERN extern
+
+#endif
+
 #endif
 
 #if defined(__clang__)
