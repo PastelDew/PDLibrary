@@ -9,6 +9,11 @@
 #define PDLDLL_API __attribute__((__visibility__("default")))
 #define PDLDLL_EXTERN extern "C"
 
+#elif defined(__clang__) // For mac
+
+#define PDLDLL_API __attribute__((__visibility__("default")))
+#define PDLDLL_EXTERN extern "C"
+
 #elif defined(WIN32)
 
 #ifdef PDL_DLL_EXPORTS
