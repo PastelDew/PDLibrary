@@ -4,5 +4,4 @@ temp/
 .vs/
 bin/
 build/
-
-.vscode/settings.json
+.vscode/

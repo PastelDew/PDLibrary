@@ -42,7 +42,7 @@ protected:
 			arrayList.Add(b);
 		}
 
-		for (size_t i = 0; i < arrayList.Size(); i++)
+		for (int i = 0; i < (int) arrayList.Size(); i++)
 			arrayList[i].AddNPrint(0);
 		
 	}
