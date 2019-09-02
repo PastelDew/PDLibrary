@@ -4,10 +4,11 @@
 int main(void) {
 	LinkedList<Ptr<TestBase>> testCases;
 	testCases
-		<< new TestMemoryPool()
+		<< new TestPtr()
 		<< new TestArrayList()
 		<< new TestLinkedList()
-		<< new TestSort();
+		<< new TestMemoryPool()
+		;
 
 	Ptr<TestBase> testCase;
 	while (testCases.Size()) {
