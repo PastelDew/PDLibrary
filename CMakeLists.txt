@@ -5,8 +5,8 @@ project(PDLibrary
 )
 
 add_subdirectory(PDLibrary)
-#add_subdirectory(Test)
-#add_dependencies(test_exe   libpdl)
+add_subdirectory(Test)
+add_dependencies(test_exe   libpdl)
 
 message(STATUS "Compiler")
 message(STATUS " - ID       \t: ${CMAKE_CXX_COMPILER_ID}")
@@ -26,10 +26,10 @@ target_compile_definitions(libpdl
         PDL_DLL_EXPORTS
 )
 
-#target_include_directories(test_exe
-#    PRIVATE
-#        include
-#)
+target_include_directories(test_exe
+    PRIVATE
+        include
+)
 
 if(WIN32)
     if( MINGW )
