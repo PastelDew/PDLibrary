@@ -6,7 +6,6 @@ project(PDLibrary
 
 add_subdirectory(PDLibrary)
 add_subdirectory(Test)
-add_dependencies(test_exe   libpdl)
 
 message(STATUS "Compiler")
 message(STATUS " - ID       \t: ${CMAKE_CXX_COMPILER_ID}")

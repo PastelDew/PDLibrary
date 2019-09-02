@@ -17,7 +17,7 @@ target_include_directories(test_exe
 
 target_link_libraries(test_exe
     PRIVATE
-        libpdl
+        "${CMAKE_SOURCE_DIR}/bin/libpdl.lib"
 )
 
 
