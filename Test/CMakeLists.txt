@@ -10,6 +10,11 @@ add_executable(test_exe
     #include/TestMemoryPool.h
 )
 
+target_include_directories(test_exe
+    PUBLIC
+        "${CMAKE_SOURCE_DIR}/include/"
+)
+
 target_link_libraries(test_exe
     PRIVATE
         libpdl

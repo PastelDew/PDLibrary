@@ -3,7 +3,7 @@
 
 #include "TestBase.h"
 
-#include <PDL/Memory/MemoryPool.h>
+#include <pdl/Memory/MemoryPool.h>
 #include <iostream>
 
 using namespace pdl::memory;

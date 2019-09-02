@@ -1,4 +1,3 @@
-#include "../PDCore.h"
 #include "RefCount.h"
 
 using namespace pdl::memory;

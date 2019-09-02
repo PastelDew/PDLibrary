@@ -33,6 +33,7 @@ namespace pdl {
 			LinkedList<uint8_t>				buffer;
 		};
 
+		//PDLDLL_EXTERN template class PDLDLL_API LinkedList<uint8_t>;
 	}
 }
 

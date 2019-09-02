@@ -1,5 +1,5 @@
-#include "../PDCore.h"
 #include "MemoryPool.h"
+#include "Ptr.h"
 using namespace pdl::memory;
 
 MemoryPool* MemoryPool::instance = nullptr;

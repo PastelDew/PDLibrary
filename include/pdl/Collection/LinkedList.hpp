@@ -71,11 +71,11 @@ void LinkedList<T>::Append(T& data) {
 }
 
 template<typename T>
-void LinkedList<T>::Remove(T& dataz) {
+void LinkedList<T>::Remove(T& data) {
 	size_t i = 0;
 	Ptr<HTNode<T> > node = this->mFirst;
 	while(!!node->GetTail()) {
-		if (node->GetData()->Ref() == &data) {
+		if (&node->GetData() == &data) {
 			node->GetHead()->SetTail(node->GetTail());
 			node->GetTail()->SetHead(node->GetHead());
 			this->mSize--;

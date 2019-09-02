@@ -3,7 +3,7 @@
 
 #include "TestBase.h"
 
-#include <PDL/Collection/ArrayList.h>
+#include <pdl/Collection/ArrayList.h>
 #include <iostream>
 
 using namespace pdl::collection;

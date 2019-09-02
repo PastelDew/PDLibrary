@@ -23,7 +23,8 @@ Ptr<C> MemoryPool::AllocateArray(size_t count) {
 template <class C, typename... Args>
 Ptr<C> MemoryPool::Allocate(Args... args) {
 	Ptr<MemoryBlock> block = GetInstance()->AllocateBlock(sizeof(C));
-	C* obj = new(block->blockAddress) C(args);
+	//C* obj = new(block->blockAddress) C(args);
+	C* obj = {new(block->blockAddress) C(args)...};
 	block.Ref();
 	return Ptr<C>(obj, true);
 }

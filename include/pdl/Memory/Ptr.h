@@ -15,6 +15,8 @@ namespace pdl {
 		template<typename T>
 		static size_t ArraySize(T* arr) { return _msize(arr); }
 
+		class MemoryPool;
+
 		template<typename T>
 		class Ptr {
 		public:

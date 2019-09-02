@@ -12,7 +12,7 @@
 
 namespace pdl{
 	namespace memory{
-		/*PDLDLL_API*/ class MemoryPool {
+		PDLDLL_API class MemoryPool {
 		public:
 			typedef struct _MemoryBlock {
 				Ptr<_MemoryBlock> parentBlock;

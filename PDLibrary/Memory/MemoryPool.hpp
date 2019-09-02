@@ -1,4 +1,5 @@
 #include "MemoryPool.h"
+#include "Ptr.h"
 #include <assert.h>
 
 using namespace pdl::memory;

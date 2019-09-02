@@ -3,7 +3,7 @@
 
 #include "TestBase.h"
 
-#include "../../PDLibrary//Memory/Ptr.h"
+#include "pdl//Memory/Ptr.h"
 #include <iostream>
 
 using namespace pdl::memory;

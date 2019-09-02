@@ -12,7 +12,7 @@
 
 namespace pdl{
 	namespace memory{
-		PDLDLL_API class MemoryPool {
+		/*PDLDLL_API*/ class MemoryPool {
 		public:
 			typedef struct _MemoryBlock {
 				Ptr<_MemoryBlock> parentBlock;
@@ -63,7 +63,7 @@ namespace pdl{
 			Ptr<MemoryBlock> FindFreeBlock(size_t size);
 			bool HasNextBlock(Ptr<MemoryBlock> block);
 		};
-		PDLDLL_EXTERN template class PDLDLL_API Ptr<MemoryPool::MemoryBlock>;
+		//PDLDLL_EXTERN template class PDLDLL_API Ptr<MemoryPool::MemoryBlock>;
 		PDLDLL_EXTERN template class PDLDLL_API Ptr<uint8_t>;
 	}
 }
