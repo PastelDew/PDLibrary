@@ -46,8 +46,8 @@ namespace pdl{
 			std::mutex mMutex;
 
 			size_t mBlockSize;
-			map<Ptr<MemoryBlock>, size_t> mPages;
-			map<Ptr<MemoryBlock>, size_t> mAvailableBlock;
+			std::map<Ptr<MemoryBlock>, size_t> mPages;
+			std::map<Ptr<MemoryBlock>, size_t> mAvailableBlock;
 
 		private:
 			static void Initialize();
@@ -63,11 +63,12 @@ namespace pdl{
 			Ptr<MemoryBlock> FindFreeBlock(size_t size);
 			bool HasNextBlock(Ptr<MemoryBlock> block);
 		};
-		//PDLDLL_EXTERN template class PDLDLL_API Ptr<MemoryPool::MemoryBlock>;
+		PDLDLL_EXTERN template class PDLDLL_API Ptr<MemoryPool::MemoryBlock>;
 		PDLDLL_EXTERN template class PDLDLL_API Ptr<uint8_t>;
 	}
 }
 
+PDLDLL_EXTERN template class PDLDLL_API std::map<pdl::memory::Ptr<pdl::memory::MemoryPool::MemoryBlock>, size_t>;
 #include "MemoryPool.hpp"
 
 #endif // End of _PDL_MEMORY_MEMORYPOOL_H_

@@ -102,7 +102,7 @@ Ptr<MemoryPool::MemoryBlock> MemoryPool::GetNextBlock(Ptr<MemoryBlock> block) {
 
 MemoryPool* MemoryPool::GetInstance() {
 	Initialize();
-	return instance;
+	return MemoryPool::instance;
 }
 
 Ptr<uint8_t> MemoryPool::Allocate(size_t size) {
@@ -111,6 +111,6 @@ Ptr<uint8_t> MemoryPool::Allocate(size_t size) {
 }
 
 void MemoryPool::Initialize() {
-	if (!instance)
-		instance = new MemoryPool();
+	if (!MemoryPool::instance)
+		MemoryPool::instance = new MemoryPool();
 }

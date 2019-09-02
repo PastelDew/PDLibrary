@@ -1,13 +1,6 @@
 add_library(libpdl STATIC MODULE SHARED
     PDCore.h
 
-    ### Algorithm
-    Algorithm/sort/SortBase.h
-
-    Algorithm/sort/BubbleSort.h
-    Algorithm/sort/BubbleSort.hpp
-    
-
     ### Collection
     Collection/ArrayList.h
     Collection/ArrayList.hpp
@@ -20,8 +13,8 @@ add_library(libpdl STATIC MODULE SHARED
 
     Collection/Serializable.h
     
-    Collection/Serialize.cpp
     Collection/Serialize.h
+    Collection/Serialize.cpp
 
 
     ### Debug
@@ -29,15 +22,15 @@ add_library(libpdl STATIC MODULE SHARED
     Debug/Exception.h
 
     ### Memory
-    Memory/MemoryPool.cpp
     Memory/MemoryPool.h
     Memory/MemoryPool.hpp
+    Memory/MemoryPool.cpp
 
     Memory/Ptr.h
     Memory/Ptr.hpp
 
-    Memory/RefCount.cpp
     Memory/RefCount.h
+    Memory/RefCount.cpp
 )
 
 if(WIN32)
@@ -52,6 +45,7 @@ if(WIN32)
         COMMAND xcopy /Y \"${CMAKE_SOURCE_DIR}\\PDLibrary\\*.hpp\" \"${CMAKE_SOURCE_DIR}\\include\\pdl\\*.hpp\" /e /h /k /q
         COMMAND echo mkdir \"${CMAKE_SOURCE_DIR}\\bin\"
         COMMAND xcopy /Y \"${CMAKE_SOURCE_DIR}\\build\\PDLibrary\\*.dll\" \"${CMAKE_SOURCE_DIR}\\bin\\*.dll\"
+        COMMAND xcopy /Y \"${CMAKE_SOURCE_DIR}\\build\\PDLibrary\\*.lib\" \"${CMAKE_SOURCE_DIR}\\bin\\*.lib\"
         COMMAND echo \"\#\#\# -include- phase finished \#\#\#\"
     )
 elseif(APPLE)
