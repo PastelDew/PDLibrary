@@ -2,7 +2,10 @@ add_library(libpdl STATIC MODULE SHARED
     PDCore.h
 
     ### Algorithm
-    # Algorithm/
+    Algorithm/sort/SortBase.h
+
+    Algorithm/sort/BubbleSort.h
+    Algorithm/sort/BubbleSort.hpp
     
 
     ### Collection

@@ -4,3 +4,4 @@ temp/
 .vs/
 bin/
 build/
+.vscode/

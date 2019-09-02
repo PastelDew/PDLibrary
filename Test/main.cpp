@@ -3,13 +3,16 @@
 
 int main(void) {
 	LinkedList<Ptr<TestBase>> testCases;
-	testCases << new TestMemoryPool() << new TestArrayList() << new TestLinkedList();
+	testCases
+		<< new TestMemoryPool()
+		<< new TestArrayList()
+		<< new TestLinkedList()
+		<< new TestSort();
 
 	Ptr<TestBase> testCase;
 	while (testCases.Size()) {
 		testCases >> testCase;
 		testCase->Run();
 	}
-	system("pause");
 	return 0;
 }

@@ -86,7 +86,7 @@ void ArrayList<T>::Clear() {
 
 template<typename T>
 T& ArrayList<T>::Get(int index) {
-	if (index < 0) index = size - index - 1;
+	if (index < 0) index = (int)(size - (size_t)index - 1);
 	if (index < 0 || (size_t)index >= capacity)
 		throw new Exception("The given index is out of range!");
 	return arrayList[index];
