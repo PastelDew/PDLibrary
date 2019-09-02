@@ -14,11 +14,7 @@
 #define PDLDLL_API __attribute__((__visibility__("default")))
 #define PDLDLL_EXTERN extern "C"
 
-<<<<<<< HEAD:include/pdl/PDCore.h
-#elif defined(WIN32)
-=======
 #elif defined(WIN32) || defined(_MSC_VER)
->>>>>>> master:include/PDL/PDCore.h
 
 #ifdef PDL_DLL_EXPORTS
 
@@ -52,7 +48,7 @@
 #include <iostream>
 
 #include "Memory/Ptr.h"
-#include "Memory/MemoryPool.h"
+//#include "Memory/MemoryPool.h"
 //#include "Core/Object.h"
 
 #endif // End of _PDL_PDCORE_H_

@@ -1,6 +1,5 @@
-#include "../PDCore.h"
-#include "MemoryPool.h"
 #include "Ptr.h"
+#include "MemoryPool.h"
 
 using namespace pdl::memory;
 

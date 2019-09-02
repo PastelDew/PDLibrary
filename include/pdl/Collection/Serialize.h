@@ -33,11 +33,7 @@ namespace pdl {
 			LinkedList<uint8_t>				buffer;
 		};
 
-<<<<<<< HEAD:include/pdl/Collection/Serialize.h
 		//PDLDLL_EXTERN template class PDLDLL_API LinkedList<uint8_t>;
-=======
-		PDLDLL_EXTERN template class PDLDLL_API LinkedList<uint8_t>;
->>>>>>> master:include/PDL/Collection/Serialize.h
 	}
 }
 
