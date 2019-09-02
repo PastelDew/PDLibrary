@@ -14,7 +14,7 @@
 #define PDLDLL_API __attribute__((__visibility__("default")))
 #define PDLDLL_EXTERN extern "C"
 
-#elif defined(WIN32)
+#elif defined(WIN32) || defined(_MSC_VER)
 
 #ifdef PDL_DLL_EXPORTS
 
