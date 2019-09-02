@@ -3,7 +3,6 @@
 
 #include "RefCount.h"
 #include "../Debug/Debug.h"
-#include "MemoryPool.h"
 
 using namespace pdl::debug;
 
@@ -15,8 +14,6 @@ namespace pdl {
 		static size_t ArraySize(T*& arr) { return _msize(arr); }
 		template<typename T>
 		static size_t ArraySize(T* arr) { return _msize(arr); }
-
-		class MemoryPool;
 
 		template<typename T>
 		class Ptr {
