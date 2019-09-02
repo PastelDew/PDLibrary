@@ -45,13 +45,14 @@ if(WIN32)
         TARGET libpdl
         POST_BUILD
         COMMENT "### Copy include files into ${CMAKE_SOURCE_DIR}/include directory. ###"
-        COMMAND echo y|rmdir /s \"${CMAKE_SOURCE_DIR}\\include\\pdl\"
+        COMMAND echo \"${CMAKE_SOURCE_DIR}\\include\\pdl\"
+        COMMAND if exist \"${CMAKE_SOURCE_DIR}\\include\\pdl\" (echo y|rmdir /s \"${CMAKE_SOURCE_DIR}\\include\\pdl\") else (echo \"Skip rmdir\")
         COMMAND mkdir \"${CMAKE_SOURCE_DIR}\\include\\pdl\"
         COMMAND xcopy /Y \"${CMAKE_SOURCE_DIR}\\PDLibrary\\*.h\" \"${CMAKE_SOURCE_DIR}\\include\\pdl\\*.h\" /e /h /k /q
         COMMAND xcopy /Y \"${CMAKE_SOURCE_DIR}\\PDLibrary\\*.hpp\" \"${CMAKE_SOURCE_DIR}\\include\\pdl\\*.hpp\" /e /h /k /q
         COMMAND echo mkdir \"${CMAKE_SOURCE_DIR}\\bin\"
         COMMAND xcopy /Y \"${CMAKE_SOURCE_DIR}\\build\\PDLibrary\\*.dll\" \"${CMAKE_SOURCE_DIR}\\bin\\*.dll\"
-        COMMAND echo \"### COMMAND FINISHED ###\"
+        COMMAND echo \"\#\#\# -include- phase finished \#\#\#\"
     )
 elseif(APPLE)
 elseif(UNIX)
