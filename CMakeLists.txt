@@ -7,7 +7,7 @@ project(PDLibrary
 INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/include)
 
 add_subdirectory(PDLibrary)
-add_subdirectory(test)
+add_subdirectory(Test)
 add_dependencies(test_exe   libpdl)
 
 message(STATUS "Compiler")

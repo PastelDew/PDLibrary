@@ -3,11 +3,11 @@ add_executable(test_exe
 
 
     ### Test Sources
-    #include/TestArrayList.h
-    #TestSources/TestBase.h
-    #TestSources/TestIncludes.h
-    #TestSources/TestLinkedList.h
-    #TestSources/TestMemoryPool.h
+    #include/TestArrayList.hw
+    #include/TestBase.h
+    #include/TestIncludes.h
+    #include/TestLinkedList.h
+    #include/TestMemoryPool.h
 )
 
 target_link_libraries(test_exe

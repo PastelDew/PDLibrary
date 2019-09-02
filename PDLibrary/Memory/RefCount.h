@@ -7,7 +7,7 @@
 namespace pdl {
 	namespace memory {
 		typedef unsigned long long refcnt;
-		PDLDLL_EXTERN template class PDLDLL_API std::map<void*, refcnt>;
+		
 		class RefCount {
 		public:
 			PDLDLL_API static void Ref(void* ref);
@@ -19,5 +19,7 @@ namespace pdl {
 		};
 	}
 }
+
+PDLDLL_EXTERN template class PDLDLL_API std::map<void*, pdl::memory::refcnt>;
 
 #endif // End of _PDL_MEMORY_REFCOUNT_H_
