@@ -48,7 +48,7 @@
 #include <iostream>
 
 #include "Memory/Ptr.h"
-#include "Memory/MemoryPool.h"
+//#include "Memory/MemoryPool.h"
 //#include "Core/Object.h"
 
 #endif // End of _PDL_PDCORE_H_
