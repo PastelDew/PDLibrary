@@ -1,6 +1,10 @@
 add_library(libpdl STATIC MODULE SHARED
     PDCore.h
 
+    ### Core
+    Core/Random.h
+    Core/Random.cpp
+
     ### Collection
     Collection/ArrayList.h
     Collection/ArrayList.hpp
@@ -31,15 +35,31 @@ add_library(libpdl STATIC MODULE SHARED
 
     Memory/RefCount.h
     Memory/RefCount.cpp
+
+    ### libs
+    libs/WELL/WELL512a.h
+    libs/WELL/WELL512a.cpp
+    libs/WELL/WELL1024a.h
+    libs/WELL/WELL1024a.cpp
+    libs/WELL/WELL19937a.h
+    libs/WELL/WELL19937a.cpp
+    libs/WELL/WELL44497a.h
+    libs/WELL/WELL44497a.cpp
 )
 
 if(WIN32)
     ADD_CUSTOM_COMMAND(
         TARGET libpdl
-        POST_BUILD
-        COMMENT "### Copy include files into ${CMAKE_SOURCE_DIR}/include directory. ###"
+        PRE_BUILD
+        COMMENT "### Remove include files in ${CMAKE_SOURCE_DIR}/include directory. ###"
         COMMAND echo \"${CMAKE_SOURCE_DIR}\\include\\pdl\"
         COMMAND if exist \"${CMAKE_SOURCE_DIR}\\include\\pdl\" (echo y|rmdir /s \"${CMAKE_SOURCE_DIR}\\include\\pdl\") else (echo \"Skip rmdir\")
+        COMMAND echo \"\#\#\# -remove- phase finished \#\#\#\"
+    )
+    ADD_CUSTOM_COMMAND(
+        TARGET libpdl
+        POST_BUILD
+        COMMENT "### Copy include files into ${CMAKE_SOURCE_DIR}/include directory. ###"
         COMMAND mkdir \"${CMAKE_SOURCE_DIR}\\include\\pdl\"
         COMMAND xcopy /Y \"${CMAKE_SOURCE_DIR}\\PDLibrary\\*.h\" \"${CMAKE_SOURCE_DIR}\\include\\pdl\\*.h\" /e /h /k /q
         COMMAND xcopy /Y \"${CMAKE_SOURCE_DIR}\\PDLibrary\\*.hpp\" \"${CMAKE_SOURCE_DIR}\\include\\pdl\\*.hpp\" /e /h /k /q
