@@ -1,19 +1,15 @@
 #include "include/TestIncludes.h"
-#include <iostream>
 
 int main(void) {
-	LinkedList<Ptr<TestBase>> testCases;
-	testCases
-		<< new TestPtr()
-		<< new TestArrayList()
-		<< new TestLinkedList()
-		<< new TestMemoryPool()
-		;
+	TEST_CASE_IMPORT
 
 	Ptr<TestBase> testCase;
-	while (testCases.Size()) {
-		testCases >> testCase;
+	while (TestCases.Size()) {
+		TestCases >> testCase;
 		testCase->Run();
 	}
+#if defined(WIN32) || defined(_MSC_VER)
+	system("pause");
+#endif
 	return 0;
 }
